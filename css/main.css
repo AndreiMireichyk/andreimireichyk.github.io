@@ -61,20 +61,18 @@ blockquote, q {
 
 /*Din pro*/
 @font-face {
-  font-family: 'DIN Pro regular';
-  src: url("../fonts/din/DINPro-CondensedRegular.eot");
-  src: local("DIN Pro Condensed Regular"), local("DINPro-CondensedRegular"), url("../fonts/din/DINPro-CondensedRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-CondensedRegular.woff") format("woff"), url("../fonts/din/DINPro-CondensedRegular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1rem; }
+  font-family: 'DIN Pro medium';
+  src: url("../fonts/din/DINPro-Medium.eot");
+  src: local("DIN Pro Medium"), local("DINPro-Medium"), url("../fonts/din/DINPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-Medium.woff") format("woff"), url("../fonts/din/DINPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
 
 @font-face {
-  font-family: 'DIN Pro medium';
-  src: url("../fonts/din/DINPro-CondensedMedium.eot");
-  src: local("DIN Pro Condensed Medium"), local("DINPro-CondensedMedium"), url("../fonts/din/DINPro-CondensedMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-CondensedMedium.woff") format("woff"), url("../fonts/din/DINPro-CondensedMedium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1rem; }
+  font-family: 'DIN Pro Regular';
+  src: url("../fonts/din/DINPro.eot");
+  src: url("../fonts/din/DINPro.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro.woff") format("woff"), url("../fonts/din/DINPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -154,8 +152,8 @@ blockquote, q {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  letter-spacing: 1px;
-  font-size: 17px; }
+  letter-spacing: 0.5px;
+  font-size: 16px; }
   .btn:active {
     outline: none;
     color: #e5007e;
@@ -186,7 +184,7 @@ blockquote, q {
       content: "";
       border-bottom: 2px solid #4D78BE;
       display: block;
-      margin-top: 4.5px;
+      margin-top: 7px;
       width: 68%;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
@@ -248,18 +246,18 @@ section#one {
     display: -ms-flexbox;
     display: flex; }
     section#one .wrap .information {
-      max-width: 480px;
+      max-width: 500px;
       padding-top: 150px;
       text-align: left !important; }
       section#one .wrap .information h1 {
         font-family: "Gotham Pro";
         font-size: 32px;
+        font-weight: bold;
         margin-bottom: 15px; }
       section#one .wrap .information p {
-        font-family: "DIN Pro medium";
-        font-size: 19px;
+        font-family: "DIN Pro regular";
+        font-size: 17px;
         line-height: 23px;
-        letter-spacing: 0.5px;
         margin-bottom: 15px; }
       section#one .wrap .information a {
         font-size: 19px; }
@@ -270,7 +268,7 @@ section#two {
   section#two .ico-list {
     padding: 30px 0px; }
   section#two .information p {
-    max-width: 500px; }
+    max-width: 600px; }
   section#two img {
     max-width: 800px;
     width: 100%;
@@ -281,7 +279,7 @@ section#three {
   background: #F9F9F9;
   text-align: center; }
   section#three .information p {
-    max-width: 640px; }
+    max-width: 734px; }
   section#three .ico-list {
     padding-bottom: 70px; }
     section#three .ico-list li {
@@ -303,7 +301,7 @@ section#four {
     section#four .ico-list li {
       padding: 5px 15px; }
   section#four .information p {
-    max-width: 600px; }
+    max-width: 664px; }
 
 section#five {
   padding: 80px 40px 55px 40px;
@@ -311,10 +309,10 @@ section#five {
   section#five .information h1, section#five .information p {
     color: #fff; }
   section#five .information p {
-    max-width: 850px;
+    max-width: 664px;
     padding-bottom: 20px; }
   section#five .information a {
-    margin: 15px 15px; }
+    margin: 15px 18px; }
 
 .information {
   margin: 0 auto;
@@ -322,15 +320,15 @@ section#five {
   .information h1 {
     font-family: "Gotham Pro";
     font-size: 36px;
+    font-weight: bold;
     margin-bottom: 15px; }
   .information p {
     font-family: "DIN Pro regular";
-    font-size: 19px;
+    font-size: 17px;
     line-height: 23px;
-    letter-spacing: 0.5px;
     margin: 15px auto; }
   .information a {
-    font-size: 19px; }
+    font-size: 17px; }
 
 .ico-list {
   display: -webkit-box;
@@ -354,6 +352,7 @@ section#five {
     color: #3E3E3E;
     font-size: 38px; }
   .ico-list span {
-    font-family: "DIN Pro medium";
+    font-family: "DIN Pro regular";
+    font-size: 14px;
     display: block;
     margin-top: 10px; }
