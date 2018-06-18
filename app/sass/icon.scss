@@ -1,0 +1,55 @@
+@import "var";
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: $icon-font-size;
+}
+  .icon-logo:before {
+    content: "\e900";
+  }
+  .icon-util:before {
+    content: "\e901";
+  }
+  .icon-thermometer:before {
+    content: "\e902";
+  }
+  .icon-sostav:before {
+    content: "\e903";
+  }
+  .icon-obsluzivanie:before {
+    content: "\e904";
+  }
+  .icon-mobilnost:before {
+    content: "\e905";
+  }
+  .icon-mashtabiruemost:before {
+    content: "\e906";
+  }
+  .icon-guarantee:before {
+    content: "\e907";
+  }
+  .icon-Group-58:before {
+    content: "\e908";
+  }
+  .icon-gibkost:before {
+    content: "\e909";
+  }
+  .icon-energoeffect:before {
+    content: "\e90a";
+  }
+  .icon-bezopasn:before {
+    content: "\e90b";
+  }
