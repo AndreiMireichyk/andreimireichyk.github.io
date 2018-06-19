@@ -77,6 +77,13 @@ html, body {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'DIN Pro light';
+  src: url("../fonts/din/DINPro-Light.eot");
+  src: local("DIN Pro Light"), local("DINPro-Light"), url("../fonts/din/DINPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-Light.woff") format("woff"), url("../fonts/din/DINPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -94,8 +101,22 @@ html, body {
   vertical-align: middle;
   font-size: 1rem; }
 
+.icon-arrow:before {
+  content: "\e904"; }
+
+.icon-medium2:before {
+  content: "\e902";
+  font-size: 20px;
+  position: relative;
+  bottom: 7px; }
+
+.icon-recycle:before {
+  content: "\e903"; }
+
 .icon-mobil:before {
-  content: "\e901"; }
+  content: "\e901";
+  font-size: 34px;
+  line-height: 38px; }
 
 .icon-guarantee:before {
   content: "\e918"; }
@@ -114,30 +135,11 @@ html, body {
   content: "\e90d"; }
 
 .icon-vk:before {
-  content: "\e90e"; }
-
-.icon-med .path1:before {
-  content: "\e90f";
-  color: #838383;
-  opacity: 0.7; }
-
-.icon-med .path2:before {
-  content: "\e910";
-  margin-left: -1em;
-  color: #5d5d5d;
-  opacity: 0.7; }
-
-.icon-med .path3:before {
-  content: "\e911";
-  margin-left: -1em;
-  color: #424242;
-  opacity: 0.7; }
-
-.icon-med .path4:before {
-  content: "\e912";
-  margin-left: -1em;
-  color: #222222;
-  opacity: 0.7; }
+  content: "\e90e";
+  font-size: 45px;
+  line-height: 41px;
+  position: relative;
+  right: 4px; }
 
 .icon-util:before {
   content: "\e913"; }
@@ -208,15 +210,17 @@ html, body {
     -webkit-box-shadow: none !important;
             box-shadow: none !important; }
   .btn-link-dark {
-    padding: 11px 16px;
-    background: #222222;
-    color: #fff; }
+    padding: 12px 18px;
+    background: #454545;
+    color: #fff;
+    font-family: "DIN Pro regular"; }
     .btn-link-dark.inverse {
       border: 1px solid #222222;
       color: #222222;
       background: none; }
   .btn-link-light-border {
-    padding: 10px 15px;
+    font-family: "DIN Pro regular";
+    padding: 12px 18px;
     background: #222222;
     color: #fff;
     border: 1px solid #fff; }
@@ -386,12 +390,12 @@ header#header {
 
 section#one {
   margin-top: 80px;
-  padding: 62px 0px 0px 40px;
+  padding-top: 62px;
   min-height: 100%;
   height: 100%;
   overflow: hidden;
-  -webkit-box-sizing: box;
-          box-sizing: box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: url("../img/bg1.jpg") no-repeat center right;
   -webkit-background-size: auto 90%;
           background-size: auto 90%; }
@@ -401,23 +405,66 @@ section#one {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
     section#one .wrap .inf {
       position: relative;
-      top: -25vh; }
-    section#one .wrap .text--h1 {
-      -webkit-align-self: center;
-          -ms-flex-item-align: center;
-              align-self: center;
-      margin-bottom: 15px; }
-    section#one .wrap .text--desc {
-      margin-bottom: 15px;
-      max-width: 500px; }
-    section#one .wrap .btn {
-      font-size: 19px; }
+      top: -20vh;
+      margin-left: 40px; }
+      section#one .wrap .inf .text--h1 {
+        -webkit-align-self: center;
+            -ms-flex-item-align: center;
+                align-self: center;
+        margin-bottom: 15px; }
+      section#one .wrap .inf .text--desc {
+        margin-bottom: 15px;
+        max-width: 500px; }
+      section#one .wrap .inf .btn {
+        font-size: 19px; }
+  section#one .more-tech {
+    position: absolute;
+    bottom: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    section#one .more-tech .line {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+      margin-right: 15px;
+      height: 1px;
+      background: #dedede; }
+    section#one .more-tech .text-tech {
+      white-space: nowrap;
+      margin-right: 15px;
+      font-family: "DIN Pro light";
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0.7;
+      word-wrap: no; }
+    section#one .more-tech .icon-arrow {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      color: #222222;
+      opacity: 0.7;
+      font-size: 7px;
+      margin-right: 40px; }
 
 section#two {
   padding: 0px 40px 100px 40px;
@@ -449,9 +496,13 @@ section#three {
     width: 100%; }
   section#three .ico-list {
     margin: 0 auto 50px auto; }
-    section#three .ico-list .icon-mobil {
-      font-size: 34px;
-      line-height: 38px; }
+    section#three .ico-list::after, section#three .ico-list::before {
+      content: "";
+      height: 1px;
+      background: -webkit-radial-gradient(50% 30%, #dedede, #f9f9f9);
+      background: -o-radial-gradient(50% 30%, #dedede, #f9f9f9);
+      background: radial-gradient(50% 30%, #dedede, #f9f9f9);
+      width: 100%; }
   section#three a {
     font-size: 17px; }
 
@@ -596,9 +647,9 @@ footer#footer {
   .ico-list::after, .ico-list::before {
     content: "";
     height: 1px;
-    background: -webkit-radial-gradient(50% 30%, #ddd, #fff);
-    background: -o-radial-gradient(50% 30%, #ddd, #fff);
-    background: radial-gradient(50% 30%, #ddd, #fff);
+    background: -webkit-radial-gradient(50% 30%, #dedede, #fff);
+    background: -o-radial-gradient(50% 30%, #dedede, #fff);
+    background: radial-gradient(50% 30%, #dedede, #fff);
     width: 100%; }
   .ico-list li {
     padding: 20px 35px; }
