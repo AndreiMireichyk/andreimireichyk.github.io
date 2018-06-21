@@ -749,6 +749,8 @@ html, body {
         font-size: 16px;
         line-height: 20px;
         color: #222222; }
+        .navbar__collapse .nav__link:hover {
+          color: #E947A0 !important; }
   .navbar__collapse.open {
     position: absolute;
     top: 65px;
@@ -825,10 +827,10 @@ header#header {
   width: 100%; }
   @media screen and (max-width: 1100px) {
     header#header {
-      padding-right: 15px !important; } }
+      padding-right: 20px !important; } }
   @media screen and (max-width: 1100px) {
     header#header {
-      padding-left: 15px !important; } }
+      padding-left: 20px !important; } }
   @media screen and (max-width: 960px) {
     header#header {
       padding-right: 20px !important; } }
