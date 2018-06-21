@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <link rel="stylesheet" href="css/libs.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32px" href="img/favicon32.png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon32.png">
     <link rel="stylesheet" href="css/main.css">
+
 
 </head>
 <body>
@@ -13,39 +16,48 @@
 
     <div class="wrap">
 
-        <a href="" class="logo"><i class="icon icon-logo"></i></a>
+        <a href="" class="logo mobile"><i class="icon icon-Logo-mobile"></i></a>
+        <a href="" class="logo desktop"><i class="icon icon-logo"></i></a>
         <nav>
             <ul class="menu">
                 <li><a class="btn btn-link-menu active" href="#">О Нас</a></li>
                 <li><a class="btn btn-link-menu" href="#">Продукты</a></li>
                 <li><a class="btn btn-link-menu" href="#">FAQ</a></li>
                 <li><a class="btn btn-link-menu" href="#">Контакты</a></li>
+                <li><a class="btn btn-link-menu" href="#">Библеотека</a></li>
                 <li><a class="btn btn-link-menu" href="#">Форум</a></li>
                 <li><a class="btn btn-link-menu" href="#">Eng</a></li>
                 <li><a class="btn btn-link-dark" href="#">Оформить заказ</a></li>
             </ul>
         </nav>
+        <div class="hamburger">
+            <a href="#" class="btn store"><i class="icon icon-ic_shopping-bag"></i></a>
+            <a href="#" class="btn open-menu"><i class="icon icon-ic_menu"></i></a>
+
+        </div>
+
     </div>
 
 </header>
 
 <section id="one">
-    <div class="wrap">
-        <div class="inf">
-            <h1 class="text--h1">Больше чем просто майнинг</h1>
-            <p class="text--desc">BiXBiT Miner - это компактный, легкомасштабируемый мобильный майнер, оснащённый
+
+    <div class="screen">
+        <div class="screen__inf">
+            <h1 class="screen__inf__title text--h1">Больше чем просто майнинг</h1>
+            <p class="screen__inf__desc text--desc">BiXBiT Miner - это компактный, легкомасштабируемый мобильный майнер,
+                оснащённый
                 системой иммерсионного охлажения, жизнеобеспечения и удаленного администрирования.</p>
-            <a href="#" class="btn btn-link">Продукт</a>
+            <a href="#" class="screen__inf__btn btn btn-link">Продукт</a>
         </div>
 
-
-
+        <div class="screen__img"></div>
     </div>
 
-    <div class="more-tech">
-        <div class="line"></div>
-        <div class="text-tech">ПОДРОБНЕЕ О ТЕХНОЛОГИЯХ </div>
-        <i class="icon icon-arrow"></i>
+    <div class="more">
+        <div class="more__line"></div>
+        <div class="more__text">ПОДРОБНЕЕ О ТЕХНОЛОГИЯХ</div>
+        <i class="more__icon icon icon-arrow"></i>
 
     </div>
 
@@ -53,64 +65,72 @@
 
 <section id="two" class="t--c">
 
+    <div class="screen">
+        <h4 class="screen__title text--h1">Иммерсионное охлаждение</h4>
+        <p class="screen__desc text--desc">Компоненты оборудования полностью погружаются в диэлектрическую жидкость.
+            Такой вид
+            охлаждения
+            обеспечивает оптимальные условия для большого количества вычислительных устройств, так рабочая температура
+            оборудования поддерживается в нужном диапазоне, а за счет полного погружения тепло равномерно отводится от
+            всех
+            элементов и защищает оборудование от внешних негативных воздействий, таких как пыль или насекомые.
+        </p>
+        <a href="#" class="screen__btn btn btn-link">Продукт</a>
+    </div>
 
-    <h4 class="text--h1">Иммерсионное охлаждение</h4>
-    <p class="text--desc">Компоненты оборудования полностью погружаются в диэлектрическую жидкость. Такой вид охлаждения
-        обеспечивает оптимальные условия для большого количества вычислительных устройств, так рабочая температура
-        оборудования поддерживается в нужном диапазоне, а за счет полного погружения тепло равномерно отводится от всех
-        элементов и защищает оборудование от внешних негативных воздействий, таких как пыль или насекомые.
-    </p>
-    <a href="#" class="btn btn-link">Продукт</a>
 
-    <ul class="ico-list">
+    <ul class="list">
         <li>
-            <i class="icon icon-sostav"></i>
-            <span>Уникальный состав</span>
+            <i class="list__icon icon icon-sostav"></i>
+            <span class="list__desc">Уникальный состав</span>
         </li>
         <li>
-            <i class="icon icon-obsluzivanie"></i>
-            <span>Легкость обслуживания</span>
+            <i class="list__icon icon icon-obsluzivanie"></i>
+            <span class="list__desc">Легкость обслуживания</span>
         </li>
         <li>
-            <i class="icon icon-bio"></i>
-            <span>Экологичность</span>
+            <i class="list__icon icon icon-bio"></i>
+            <span class="list__desc">Экологичность</span>
         </li>
         <li>
-            <i class="icon icon-thermometer"></i>
-            <span>Термостабильность</span>
+            <i class="list__icon icon icon-thermometer"></i>
+            <span class="list__desc">Термостабильность</span>
         </li>
     </ul>
-    <img src="img/bg2.png" alt="Иммерсионное охлаждение">
+
+    <img class="image" src="img/bg2.png" alt="Иммерсионное охлаждение">
 </section>
 
 <section id="three" class="t--c">
+    <div class="screen">
+        <h4 class="screen__title text--h1">Конструкция</h4>
+        <p class="screen__desc text--desc">Благодаря применению иммерсионной системы охлаждения удалось достичь столь
+            высокой
+            плотности
+            размещения устройств внутри контейнера, а вертикальная конструкция стоек позволяет разместить больше единиц
+            оборудования, чем горизонтальная. Опционально оснащается градирней для эффективной утилизации тепла.
+            Промышленное производство обеспечивает механическую прочность и устойчивость всей конструкции.
+        </p>
+    </div>
 
-    <h4 class="text--h1">Конструкция</h4>
+    <img class="image" src="img/bg3.png" alt="Спецификация">
 
-    <p class="text--desc">Благодаря применению иммерсионной системы охлаждения удалось достичь столь высокой плотности
-        размещения устройств внутри контейнера, а вертикальная конструкция стоек позволяет разместить больше единиц
-        оборудования, чем горизонтальная. Опционально оснащается градирней для эффективной утилизации тепла.
-        Промышленное производство обеспечивает механическую прочность и устойчивость всей конструкции.
-    </p>
-
-    <img src="img/bg3.png" alt="Спецификация">
-
-    <ul class="ico-list">
+    <ul class="list">
         <li>
-            <i class="icon icon-mobil"></i>
-            <span>Мобильность</span>
+            <i class="list__icon icon icon-mobil"></i>
+            <span class="list__desc">Мобильность</span>
         </li>
         <li>
-            <i class="icon icon-mashtabiruemost"></i>
-            <span>Маштабиремость</span>
+            <i class="list__icon icon icon-mashtabiruemost"></i>
+            <span class="list__desc">Маштабиремость</span>
         </li>
         <li>
-            <i class="icon icon-bezopasn"></i>
-            <span>Безопасность</span>
+            <i class="list__icon icon icon-bezopasn"></i>
+            <span class="list__desc">Безопасность</span>
         </li>
         <li>
-            <i class="icon icon-gibkost-2"></i>
-            <span>Гибкость конфигурации</span>
+            <i class="list__icon icon icon-gibkost-2"></i>
+            <span class="list__desc">Гибкость конфигурации</span>
         </li>
     </ul>
 
@@ -118,43 +138,50 @@
 </section>
 
 <section id="four" class="t--c">
+    <div class="screen">
 
-    <h4 class="text--h1">Экономика</h4>
 
-    <ul class="ico-list">
-        <li>
-            <i class="icon icon-recycle"></i>
-            <span>Утилизация тепла</span>
-        </li>
-        <li>
-            <i class="icon icon-guarantee"></i>
-            <span>Гарантия 3 года</span>
-        </li>
-        <li>
-            <i class="icon icon-energoeffect"></i>
-            <span>Энергоэффективность</span>
-        </li>
-    </ul>
+        <h4 class="screen__title text--h1">Экономика</h4>
 
-    <p class="text--desc">Использование иммерсионного охлаждения создаёт ряд экономических эффектов, которые позволяют
-        не только уменьшить затраты на охлаждение в целом, но и получать дополнительную прибыль за счет стабильной
-        работы устройств в режиме максимальной производительности. Таким образом срок окупаемости оборудования
-        значительно сокращается.
-    </p>
+        <ul class="list">
+            <li>
+                <i class="list__icon icon icon-recycle"></i>
+                <span class="list__desc">Утилизация тепла</span>
+            </li>
+            <li>
+                <i class="list__icon icon icon-guarantee"></i>
+                <span class="list__desc">Гарантия 3 года</span>
+            </li>
+            <li>
+                <i class="list__icon icon icon-energoeffect"></i>
+                <span class="list__desc">Энергоэффективность</span>
+            </li>
+        </ul>
 
-    <a href="#" class="btn btn-link">Продукт</a>
+        <p class="screen__desc text--desc">Использование иммерсионного охлаждения создаёт ряд экономических эффектов, которые
+            позволяют
+            не только уменьшить затраты на охлаждение в целом, но и получать дополнительную прибыль за счет стабильной
+            работы устройств в режиме максимальной производительности. Таким образом срок окупаемости оборудования
+            значительно сокращается.
+        </p>
 
+        <a href="#" class="screen__btn btn btn-link">Продукт</a>
+    </div>
 </section>
 
 <section id="five" class="t--c">
-    <h4 class="text--h1">Конфигурация под ключ</h4>
+    <div class="screen">
+        <h4 class="screen__title text--h1">Конфигурация под ключ</h4>
 
-    <p class="text--desc">Благодаря модульности конструкции сохраняется возможность для индивидуального решения, которое
-        легко может быть совмещено с текущим оборудованием заказчика
-    </p>
-    <a href="#" class="btn btn-link-light-border">Оформить заказ</a>
-    <a href="#" class="btn btn-link">Подробнее о продукте</a>
+        <p class="screen__desc text--desc">Благодаря модульности конструкции сохраняется возможность для индивидуального решения, которое
+            легко может быть совмещено с текущим оборудованием заказчика
+        </p>
+        <a href="#" class="btn btn-link-light-border">Оформить заказ</a>
+        <a href="#" class="screen__btn btn btn-link">Подробнее о продукте</a>
+    </div>
+
 </section>
+
 <nav class="float-nav">
     <ul class="t--r">
         <li class="active"><a href="#one" class="btn btn-link-fl-n active">Главная</a></li>
@@ -163,6 +190,8 @@
         <li><a href="#four" class="btn btn-link-fl-n">Экономика</a></li>
     </ul>
 </nav>
+
+
 <footer id="footer">
     <div class="wrap">
 
@@ -224,6 +253,6 @@
 </footer>
 
 <script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/fullpage/dist/jquery.fullpage.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
