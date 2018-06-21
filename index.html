@@ -6,36 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="32px" href="img/favicon32.png">
     <link rel="apple-touch-icon-precomposed" href="img/favicon32.png">
-    <link rel="stylesheet" href="css/main.css?1">
+    <link rel="stylesheet" href="css/main.css?3">
 </head>
 <body>
 
-<header id="header">
+<header id="header" class="light">
+    <nav class="navbar">
+        <a href="#" class="navbar__brand">
+            <i class="icon icon-logo"></i>
+            <i class="icon icon-logo-text"></i>
+        </a>
 
-    <div class="wrap">
-
-        <a href="" class="logo mobile"><i class="icon icon-Logo-mobile"></i></a>
-        <a href="" class="logo desktop"><i class="icon icon-logo"></i></a>
-        <nav>
-            <ul class="menu">
-                <li><a class="btn btn-link-menu active" href="#">О Нас</a></li>
-                <li><a class="btn btn-link-menu" href="#">Продукты</a></li>
-                <li><a class="btn btn-link-menu" href="#">FAQ</a></li>
-                <li><a class="btn btn-link-menu" href="#">Контакты</a></li>
-                <li><a class="btn btn-link-menu" href="#">Библеотека</a></li>
-                <li><a class="btn btn-link-menu" href="#">Форум</a></li>
-                <li><a class="btn btn-link-menu" href="#">Eng</a></li>
-                <li><a class="btn btn-link-dark" href="#">Оформить заказ</a></li>
-            </ul>
-        </nav>
-        <div class="hamburger">
-            <a href="#" class="btn store"><i class="icon icon-ic_shopping-bag"></i></a>
-            <a href="#" class="btn open-menu"><i class="icon icon-ic_menu"></i></a>
+        <div class="navbar__fix_position">
+            <a href="#" class="navbar__toggler">
+                <i class="icon icon-menu"></i>
+            </a>
+            <a href="#" class="navbar__shopping">
+                <i class="icon icon-shopping"></i>
+            </a>
 
         </div>
 
-    </div>
 
+        <div class="navbar__collapse">
+            <ul class="nav">
+                <li class="nav__item active">
+                    <a class="btn nav__link" href="#">О Нас</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="#">Продукты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="#">FAQ</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="#">Контакты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="#">Библеотека</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="#">Форум</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="#">Eng</a>
+                </li>
+                <li class="nav__item">
+                    <a class="btn btn-dark" href="#">Оформить заказ</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <section id="one">
@@ -140,7 +162,7 @@
                 <span class="list__desc">Безопасность</span>
             </li>
             <li>
-                <i class="list__icon icon icon-gibkost-2"></i>
+                <i class="list__icon icon icon-gibkost"></i>
                 <span class="list__desc">Гибкость конфигурации</span>
             </li>
         </ul>
@@ -233,7 +255,7 @@
                 <li>
                 <li>
                     <a class="btn btn-social" href="">
-                        <i class="icon icon-medium2"></i>
+                        <i class="icon icon-medium"></i>
                     </a>
                 <li>
                 <li>
@@ -261,6 +283,7 @@
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/nav/jquery.nav.js"></script>
 <script src="js/common.js"></script>
+<script src="js/menu.js"></script>
 
 
 </body>
