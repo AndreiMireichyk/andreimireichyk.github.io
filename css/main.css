@@ -367,6 +367,9 @@ html, body {
   min-height: 100%;
   height: 100%; }
 
+.sticky {
+  position: relative; }
+
 header#header {
   position: fixed;
   top: 0;
@@ -798,13 +801,15 @@ footer#footer {
           padding: 9px 16px !important; }
 
 .float-nav {
-  position: fixed;
-  top: 50%;
   right: 0;
-  margin-top: -100px;
-  /* Negative half of height. */
-  /* Negative half of width. */
   margin-right: 40px; }
+  .float-nav.fixed {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    margin-top: -100px; }
+  .float-nav.absolute {
+    position: absolute; }
   @media screen and (max-width: 1100px) {
     .float-nav {
       display: none; } }

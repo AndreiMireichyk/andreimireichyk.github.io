@@ -1,38 +1,42 @@
-$(function () {
-    $(document).on("scroll", onScroll);
 
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
+function checkOffset(el) {
+    //centred menu
+    $(el).addClass("absolute");
 
-        $('.float-nav li').each(function () {
-            $(this).parent().removeClass('active');
-        })
-        $(this).parent().addClass('active');
+    var top = ($(document).scrollTop() - $(".sticky").offset().top ) + (window.innerHeight-$(el).outerHeight())/2;
+    var start = 10;
+    var end = $(".sticky").outerHeight() - $(el).outerHeight()-10;
+    //start point
+    top = top <= start ? start : top;
+    //end point
+    top = top >= end ? end : top;
+    $(el).css("top", top+'px');
+}
 
-        var target = this.hash;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
+
+
+$(document).scroll(function() {
+
+    checkOffset(".float-nav");
+
 });
 
-function onScroll(event){
-    var scrollPosition = $(document).scrollTop();
-    $('.float-nav li').each(function () {
-        var currentLink = $("a", this);
-        var refElement = $(currentLink.attr("href"));
-        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+$(function(){
+    $('.float-nav').onePageNav({
+        currentClass: 'active',
+        changeHash: false,
+        scrollSpeed: 750,
+        filter: '',
+        easing: 'swing',
+        begin: function () {
+            $(".float-nav").hide();
+        },
+        end: function () {
+            $(".float-nav").show();
+        },
+        scrollChange: function ($currentListItem) {
 
-            console.log($('nav ul li a').parent().removeClass("active"))
-            currentLink.addClass("active");
-        }
-        else{
-            currentLink.parent().removeClass("active");
+            //I get fired when you enter a section and I pass the list item of the section
         }
     });
-}
+});
