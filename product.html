@@ -30,23 +30,20 @@
 
         <div class="navbar__collapse">
             <ul class="nav">
+                <li class="nav__item">
+                    <a class="btn nav__link" href="/index.html">О Нас</a>
+                </li>
                 <li class="nav__item active">
-                    <a class="btn nav__link" href="#">О Нас</a>
-                </li>
-                <li class="nav__item">
-                    <a class="btn nav__link" href="#">Продукты</a>
-                </li>
-                <li class="nav__item">
-                    <a class="btn nav__link" href="#">FAQ</a>
+                    <a class="btn nav__link" href="/product.html">Продукты</a>
                 </li>
                 <li class="nav__item">
                     <a class="btn nav__link" href="#">Контакты</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="#">Библеотека</a>
+                    <a class="btn nav__link" href="#">Форум</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="#">Форум</a>
+                    <a class="btn nav__link active" href="/library.html">Библеотека</a>
                 </li>
                 <li class="nav__item">
                     <a class="btn nav__link" href="#">Eng</a>
@@ -73,7 +70,7 @@
 
     <section id="prod" class="prod">
         <h1 class="prod__title text--h1">Продукты компании</h1>
-        <img src="img/b1.png" alt="Продукты компании" class="prod__image">
+        <img src="img/prod_prod.png" alt="Продукты компании" class="prod__image">
         <div class="prod__desc desc">
             <div class="desc__action action">
                 <a href="#" class="action__link btn btn-dark">Спецификация</a>
@@ -92,12 +89,12 @@
     <section id="cell" class="cell">
         <h1 class="cell__title text--h1">Ячейка</h1>
         <div class="cell__desc desc">
-            <div class="desc__desc text--desc">
+            <p class="desc__desc text--desc">
                 Телекоммуникационная стойка является составной частью контейнера, при этом выступает в качестве
                 самостоятельной единицы вычислительного оборудования, рассчитанной на 108 видеокарт или 32 устройств
                 ASIC.
-            </div>
-            <a href="#" class="desc__link btn btn-link">Подробнее</a>
+            </p>
+            <a href="/prod_more_cell.html" class="desc__link btn btn-link">Подробнее</a>
         </div>
 
         <ul class="ico_group line">
@@ -125,11 +122,11 @@
     <section id="rack" class="rack">
         <h1 class="rack__title text--h1">Стойка рабочее название</h1>
         <div class="rack__desc desc">
-            <div class="desc__desc text--desc">Телекоммуникационная стойка является составной частью контейнера, при
+            <p class="desc__desc text--desc">Телекоммуникационная стойка является составной частью контейнера, при
                 этом выступает в качестве самостоятельной единицы вычислительного оборудования, рассчитанной на 108
                 видеокарт или 32 устройств ASIC.
-            </div>
-            <a href="#" class="desc__link btn btn-link">Подробнее</a>
+            </p>
+            <a href="/prod_more_rack.html" class="desc__link btn btn-link">Подробнее</a>
         </div>
 
         <ul class="ico_group line">
@@ -155,12 +152,12 @@
     <section id="crisper" class="crisper">
         <h1 class="crisper__title text--h1">Контейнер рабочее название</h1>
         <div class="crisper__desc desc">
-            <div class="desc__desc text--desc">
+            <p class="desc__desc text--desc">
                 Для размещения вычислительного оборудования используется стандартный морской
                 контейнер. Это наиболее востребованная логистическая тара, унифицированная во
                 всем мире. Может быть доставлен в место с дешевой электроэнергией.
-            </div>
-            <a href="#" class="desc__link btn btn-link">Подробнее</a>
+            </p>
+            <a href="/prod_more_crisper.html" class="desc__link btn btn-link">Подробнее</a>
         </div>
         <img src="img/prod_crisper.png" alt="Стойка рабочее название" class="crisper__image">
         <ul class="ico_group">
@@ -197,23 +194,22 @@
     <div class="wrap">
 
         <div class="breadcrumbs">
-            <a href="#" class="btn btn-link-f-b">Главная</a>
-            <a href="#" class="btn btn-link-f-b">Продукт</a>
-            <a href="#" class="btn btn-link-f-b">Ячейка</a>
+            <a href="/index.html" class="btn btn-link-f-b">Главная</a>
+            <a href="/product.html" class="btn btn-link-f-b">Продукты</a>
         </div>
 
         <div class="menu">
             <ul class="footer-menu">
-                <li><a class="btn btn-link-f-m" href="#">Продукт</a></li>
-                <li><a class="btn btn-link-f-m active" href="#">О Нас</a></li>
-                <li><a class="btn btn-link-f-m" href="#">FAQ</a></li>
+                <li><a class="btn btn-link-f-m" href="/index.hrml">О Нас</a></li>
+                <li><a class="btn btn-link-f-m active" href="/product.html">Продукты</a></li>
+                <li><a class="btn btn-link-f-m" href="/library.html">Библеотека</a></li>
                 <li><a class="btn btn-link-f-m" href="#">Калькулятор</a></li>
                 <li><a class="btn btn-link-f-m" href="#">Контакты</a></li>
             </ul>
 
             <ul class="footer-menu">
-                <li><a class="btn btn-link-f-m" href="#">Документация</a></li>
-                <li><a class="btn btn-link-f-m" href="#">Политика конфиденциальности</a></li>
+                <li><a class="btn btn-link-f-m" href="/library.html">Документация</a></li>
+                <li><a class="btn btn-link-f-m" href="/library.html">Политика конфиденциальности</a></li>
             </ul>
 
         </div>

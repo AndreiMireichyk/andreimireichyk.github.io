@@ -8,4 +8,16 @@ $(function () {
             $(".navbar__collapse").addClass("open");
         }
     });
+
+    $(".library__nav_toggler").click(function(){
+        if($(this).hasClass( "open" )){
+            $(this).removeClass("open");
+            $(".navigation__collapse").removeClass("open");
+        }else{
+            $(this).addClass("open");
+            $(".navigation__collapse").addClass("open");
+        }
+    });
+
+
 });

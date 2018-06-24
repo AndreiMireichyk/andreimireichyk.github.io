@@ -63,6 +63,13 @@ img {
   font-style: normal;
   font-size: 1rem; }
 
+@font-face {
+  font-family: 'Gotham Pro regular';
+  src: url("../fonts/gotham/GothamPro.eot");
+  src: local("Gotham Pro"), local("GothamPro"), url("../fonts/gotham/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro.woff") format("woff"), url("../fonts/gotham/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 /*Din pro*/
 @font-face {
   font-family: 'DIN Pro medium';
@@ -634,9 +641,11 @@ html, body {
     @media screen and (max-width: 1100px) {
       .navbar__brand .icon-logo-text {
         display: none; } }
-    @media screen and (max-width: 1100px) {
-      .navbar__brand .dark-logo-text {
-        display: none; } }
+    .navbar__brand .dark-logo-text {
+      font-family: "Gotham Pro"; }
+      @media screen and (max-width: 1100px) {
+        .navbar__brand .dark-logo-text {
+          display: none; } }
   .navbar__toggler, .navbar__shopping {
     display: none;
     text-decoration: none; }
@@ -708,11 +717,15 @@ html, body {
         .navbar__collapse .nav__link:hover {
           color: #E947A0 !important; }
   .navbar__collapse.open {
-    position: absolute;
+    position: fixed;
+    z-index: 6;
+    width: 100%;
     top: 65px;
+    bottom: 0;
     left: 0;
     right: 0;
-    background: #fff; }
+    background: #fff;
+    overflow: auto; }
     @media screen and (max-width: 1100px) {
       .navbar__collapse.open {
         display: block; } }
@@ -722,8 +735,6 @@ html, body {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column;
-      margin-left: -20px;
-      margin-right: -20px;
       padding: 0 20px 0 20px;
       background-color: #fff; }
       .navbar__collapse.open .nav__item {
@@ -778,8 +789,11 @@ html, body {
   .dark .navbar__toggler .icon-menu:hover, .dark .navbar__shopping .icon-menu:hover {
     color: #e5007e; }
 
-.dark .navbar .nav__item {
-  margin-left: 37px; }
+.dark .navbar .dark-logo-text {
+  font-size: 22px;
+  line-height: 36px;
+  font-family: "Gotham Pro regular";
+  color: #fff; }
 
 .dark .navbar .nav__link {
   font-family: "DIN Pro regular";
@@ -829,11 +843,6 @@ header#header {
   header#header.dark {
     background: #39343a;
     border-bottom: 2px solid #f3f3f3; }
-  header#header .dark-logo-text {
-    font-size: 22px;
-    line-height: 36px;
-    font-family: "DIN Pro medium";
-    color: #fff; }
   header#header.light {
     background: white;
     border-bottom: 2px solid #f3f3f3; }
@@ -874,7 +883,7 @@ footer#footer {
       footer#footer .wrap .menu .footer-menu {
         min-width: 100px; }
         footer#footer .wrap .menu .footer-menu li {
-          padding: 10px 0; }
+          padding: 8px 0; }
     footer#footer .wrap .social {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1018,6 +1027,13 @@ img {
   font-weight: bold;
   font-style: normal;
   font-size: 1rem; }
+
+@font-face {
+  font-family: 'Gotham Pro regular';
+  src: url("../fonts/gotham/GothamPro.eot");
+  src: local("Gotham Pro"), local("GothamPro"), url("../fonts/gotham/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro.woff") format("woff"), url("../fonts/gotham/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 /*Din pro*/
 @font-face {
@@ -1412,7 +1428,7 @@ section#one {
       margin-right: 0px;
       width: -webkit-calc(33.33333% - 0px);
       width: calc(33.33333% - 0px);
-      padding-top: 150px;
+      padding-top: 200px;
       padding-left: 40px;
       -webkit-box-sizing: padding-box;
               box-sizing: padding-box; }
@@ -2401,8 +2417,38 @@ section#five {
           flex-wrap: wrap;
   margin-left: 0px;
   margin-right: 0px;
-  padding: 130px 40px 0px 40px;
-  background-color: #ffffff; }
+  padding: 90px 0px 0px 0px;
+  background-color: #ffffff;
+  max-width: 1088px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1100px) {
+    .library {
+      padding: 90px 20px 0px 20px; } }
+  @media screen and (max-width: 560px) {
+    .library {
+      padding: 90px 20px 0px 20px; } }
+  .library__nav_toggler {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #39343a;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1; }
+    @media screen and (max-width: 1100px) {
+      .library__nav_toggler {
+        display: block; } }
+    .library__nav_toggler .icon {
+      color: #fff; }
+    .library__nav_toggler:hover .icon {
+      color: #e5007e; }
+    .library__nav_toggler.open .icon:before {
+      content: "\e90a"; }
   .library .navigation {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2414,6 +2460,24 @@ section#five {
     @media screen and (max-width: 1100px) {
       .library .navigation {
         display: none; } }
+    @media screen and (max-width: 1100px) {
+      .library .navigation {
+        position: fixed;
+        top: 65px;
+        bottom: 0px;
+        z-index: 1;
+        left: -320px;
+        display: block;
+        background-color: #fff;
+        width: 300px;
+        border-right: 1px solid #e5e5e5;
+        overflow: auto;
+        -webkit-transition: left 0.5s;
+        -o-transition: left 0.5s;
+        transition: left 0.5s;
+        padding-left: 20px; } }
+    .library .navigation.open {
+      left: 0px; }
     .library .navigation__title {
       font-family: "DIN Pro medium";
       font-size: 26px;
@@ -2423,9 +2487,7 @@ section#five {
       font-size: 17px;
       color: #222222;
       margin-top: 25px; }
-    .library .navigation .library_list .active .btn {
-      color: #e5007e; }
-    .library .navigation .library_list .current:before {
+    .library .navigation .library_list .active:before {
       position: absolute;
       left: 0;
       top: 48%;
@@ -2439,8 +2501,8 @@ section#five {
       padding: 7.5px 20px; }
       .library .navigation .library_list__item__link {
         text-align: left;
-        font-family: "Gotham Pro" !important;
-        font-size: 14px !important;
+        font-family: "DIN Pro regular" !important;
+        font-size: 15px !important;
         color: #222222; }
         .library .navigation .library_list__item__link:hover {
           color: #e5007e; }
@@ -2452,22 +2514,42 @@ section#five {
     margin-right: 0px;
     width: -webkit-calc(75% - 0px);
     width: calc(75% - 0px); }
+    @media screen and (max-width: 1100px) {
+      .library .library__content {
+        width: -webkit-calc(100% - 0px);
+        width: calc(100% - 0px); } }
     .library .library__content .content {
       border-left: 1px solid #f0f0f0;
-      padding-left: 60px; }
+      padding-left: 50px;
+      margin-left: 10px; }
+      @media screen and (max-width: 1100px) {
+        .library .library__content .content {
+          border-left: none; } }
+      @media screen and (max-width: 1100px) {
+        .library .library__content .content {
+          padding-left: 0; } }
       .library .library__content .content_h1 {
         font-family: "DIN Pro bold";
         font-size: 44px;
         margin-bottom: 15px; }
+        @media screen and (max-width: 560px) {
+          .library .library__content .content_h1 {
+            font-size: 34px; } }
       .library .library__content .content_h2 {
         font-family: "DIN Pro bold";
         font-size: 36px;
         margin-bottom: 15px; }
+        @media screen and (max-width: 560px) {
+          .library .library__content .content_h2 {
+            font-size: 26px; } }
       .library .library__content .content_desc {
         font-family: "DIN Pro regular";
         font-size: 17px;
         line-height: 23px;
         margin-bottom: 50px; }
+        @media screen and (max-width: 560px) {
+          .library .library__content .content_desc {
+            font-size: 15px; } }
     .library .library__content .hot_nav {
       padding-left: 60px;
       display: -webkit-box;
@@ -2483,7 +2565,17 @@ section#five {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+      @media screen and (max-width: 1100px) {
+        .library .library__content .hot_nav {
+          padding-left: 0; } }
       .library .library__content .hot_nav__tags {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        word-wrap: break-word;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: -webkit-calc(41.66667% - 0px);
+        width: calc(41.66667% - 0px);
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -2493,11 +2585,17 @@ section#five {
                 flex-wrap: wrap;
         margin-left: 0px;
         margin-right: 0px;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center;
         padding-bottom: 20px; }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__tags {
+            width: -webkit-calc(100% - 0px);
+            width: calc(100% - 0px); } }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__tags {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center; } }
         .library .library__content .hot_nav__tags .tag {
           font-family: "DIN Pro regular";
           font-size: 15px;
@@ -2509,6 +2607,13 @@ section#five {
           max-height: 26px;
           margin-bottom: 10px; }
       .library .library__content .hot_nav__link {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        word-wrap: break-word;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: -webkit-calc(58.33333% - 0px);
+        width: calc(58.33333% - 0px);
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -2519,15 +2624,30 @@ section#five {
         margin-left: 0px;
         margin-right: 0px;
         padding-bottom: 20px; }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__link {
+            width: -webkit-calc(100% - 0px);
+            width: calc(100% - 0px); } }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__link {
+            width: 100%; } }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__link {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center; } }
         .library .library__content .hot_nav__link .next, .library .library__content .hot_nav__link .prev {
           padding: 0 15px;
           margin-bottom: 10px; }
           .library .library__content .hot_nav__link .next .btn, .library .library__content .hot_nav__link .prev .btn {
             font-family: "DIN Pro regular";
             font-size: 16px;
-            color: #4d78be; }
+            color: #e947a0; }
             .library .library__content .hot_nav__link .next .btn .icon, .library .library__content .hot_nav__link .prev .btn .icon {
               font-size: 8px; }
+            .library .library__content .hot_nav__link .next .btn:hover, .library .library__content .hot_nav__link .prev .btn:hover {
+              color: #e5007e; }
           .library .library__content .hot_nav__link .next .left, .library .library__content .hot_nav__link .prev .left {
             position: relative;
             top: -1px;
