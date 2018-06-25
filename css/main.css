@@ -316,6 +316,8 @@ img {
       opacity: 0.2; }
     .btn-link-f-b:last-child:after {
       content: ""; }
+    .btn-link-f-b:hover {
+      color: #222222; }
   .btn-social {
     display: inline-block;
     height: 38px;
@@ -571,6 +573,8 @@ html, body {
       opacity: 0.2; }
     .btn-link-f-b:last-child:after {
       content: ""; }
+    .btn-link-f-b:hover {
+      color: #222222; }
   .btn-social {
     display: inline-block;
     height: 38px;
@@ -961,7 +965,8 @@ footer#footer {
 .float-nav {
   position: absolute;
   right: 0;
-  margin-right: 40px; }
+  margin-right: 40px;
+  z-index: 10; }
   .float-nav.fixed {
     position: fixed;
     top: 50%;
@@ -1303,6 +1308,8 @@ img {
       opacity: 0.2; }
     .btn-link-f-b:last-child:after {
       content: ""; }
+    .btn-link-f-b:hover {
+      color: #222222; }
   .btn-social {
     display: inline-block;
     height: 38px;
@@ -1621,13 +1628,10 @@ section#three {
     position: relative;
     top: 50px;
     z-index: 1; }
-    @media screen and (max-width: 560px) {
-      section#three .image {
-        position: static; } }
   section#three .list {
     position: relative;
     z-index: 2;
-    margin: 0 auto 40px auto; }
+    margin: 0 auto 50px auto; }
     section#three .list::after, section#three .list::before {
       content: "";
       height: 1px;
@@ -1980,7 +1984,7 @@ section#five {
     width: -webkit-calc(58.33333% - 0px);
     width: calc(58.33333% - 0px);
     background-color: #f5f5f5;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid #d5d5d5;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2282,7 +2286,7 @@ section#five {
 
 .product_description {
   padding: 100px 40px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #d5d5d5;
   text-align: center; }
   @media screen and (max-width: 1100px) {
     .product_description {
@@ -2389,6 +2393,8 @@ section#five {
       opacity: 0.2; }
     .btn-link-f-b:last-child:after {
       content: ""; }
+    .btn-link-f-b:hover {
+      color: #222222; }
   .btn-social {
     display: inline-block;
     height: 38px;
