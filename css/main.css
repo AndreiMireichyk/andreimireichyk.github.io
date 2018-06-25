@@ -246,7 +246,6 @@ img {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  letter-spacing: 0.5px;
   font-size: 16px;
   cursor: pointer; }
   .btn:active {
@@ -482,7 +481,6 @@ html, body {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  letter-spacing: 0.5px;
   font-size: 16px;
   cursor: pointer; }
   .btn:active {
@@ -793,7 +791,8 @@ html, body {
   font-size: 22px;
   line-height: 36px;
   font-family: "Gotham Pro regular";
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
 
 .dark .navbar .nav__link {
   font-family: "DIN Pro regular";
@@ -1211,7 +1210,6 @@ img {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  letter-spacing: 0.5px;
   font-size: 16px;
   cursor: pointer; }
   .btn:active {
@@ -2290,7 +2288,6 @@ section#five {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  letter-spacing: 0.5px;
   font-size: 16px;
   cursor: pointer; }
   .btn:active {
@@ -2483,7 +2480,7 @@ section#five {
       font-size: 26px;
       color: #222222; }
     .library .navigation__sub_title {
-      font-family: "Gotham Pro";
+      font-family: "DIN Pro medium";
       font-size: 17px;
       color: #222222;
       margin-top: 25px; }
