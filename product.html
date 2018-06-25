@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Продукты компании</title>
+    <title>Продукция компании BiXbiT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" sizes="32px" href="img/favicon32.png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicon32.png">
-    <link rel="stylesheet" href="css/main.css?1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes=192x191>
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-512x512.png" sizes=512x512>
+    <link rel="manifest" href="assets/favicon/manifest.webmanifest">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <header id="header" class="light">
     <nav class="navbar">
-        <a href="/index.html" class="navbar__brand">
+        <a href="index.html" class="navbar__brand">
             <i class="icon icon-logo"></i>
             <i class="icon icon-logo-text"></i>
         </a>
@@ -30,28 +36,24 @@
 
         <div class="navbar__collapse">
             <ul class="nav">
-                <li class="nav__item">
-                    <a class="btn nav__link" href="/index.html">О Нас</a>
-                </li>
                 <li class="nav__item active">
-                    <a class="btn nav__link" href="/product.html">Продукты</a>
+                    <a class="btn nav__link" href="product.html">Продукты</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="/team.html">Команда</a>
+                    <a class="btn nav__link" href="team.html">Команда</a>
                 </li>
                 <li class="nav__item">
                     <a class="btn nav__link" href="#">Форум</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link active" href="/library.html">Библеотека</a>
+                    <a class="btn nav__link" href="contacts.html">Контакты</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="#">Eng</a>
+                    <a class="btn nav__link" href="faq.html">FAQ</a>
                 </li>
                 <li class="nav__item">
                     <a class="btn btn-dark" href="#">Оформить заказ</a>
                 </li>
-
             </ul>
         </div>
     </nav>
@@ -73,7 +75,7 @@
         <img src="img/prod_prod.png" alt="Продукты компании" class="prod__image">
         <div class="prod__desc desc">
             <div class="desc__action action">
-                <a href="#" class="action__link btn btn-dark">Спецификация</a>
+                <a href="assets/specification.pdf" target="_blank" class="action__link btn btn-dark">Спецификация</a>
                 <br>
                 <span class="action__file_size">PDF 3mb</span>
             </div>
@@ -94,7 +96,7 @@
                 самостоятельной единицы вычислительного оборудования, рассчитанной на 108 видеокарт или 32 устройств
                 ASIC.
             </p>
-            <a href="/prod_more_cell.html" class="desc__link btn btn-link">Подробнее</a>
+            <a href="prod_more_cell.html" class="desc__link btn btn-link">Подробнее</a>
         </div>
 
         <ul class="ico_group line">
@@ -126,7 +128,7 @@
                 этом выступает в качестве самостоятельной единицы вычислительного оборудования, рассчитанной на 108
                 видеокарт или 32 устройств ASIC.
             </p>
-            <a href="/prod_more_rack.html" class="desc__link btn btn-link">Подробнее</a>
+            <a href="prod_more_rack.html" class="desc__link btn btn-link">Подробнее</a>
         </div>
 
         <ul class="ico_group line">
@@ -157,7 +159,7 @@
                 контейнер. Это наиболее востребованная логистическая тара, унифицированная во
                 всем мире. Может быть доставлен в место с дешевой электроэнергией.
             </p>
-            <a href="/prod_more_crisper.html" class="desc__link btn btn-link">Подробнее</a>
+            <a href="prod_more_crisper.html" class="desc__link btn btn-link">Подробнее</a>
         </div>
         <img src="img/prod_crisper.png" alt="Стойка рабочее название" class="crisper__image">
         <ul class="ico_group">
@@ -194,25 +196,22 @@
     <div class="wrap">
 
         <div class="breadcrumbs">
-            <a href="/index.html" class="btn btn-link-f-b">Главная</a>
-            <a href="/product.html" class="btn btn-link-f-b">Продукты</a>
+            <a href="index.html" class="btn btn-link-f-b">Главная</a>
+            <a href="product.html" class="btn btn-link-f-b">Продукты</a>
         </div>
 
         <div class="menu">
             <ul class="footer-menu">
-                <li><a class="btn btn-link-f-m" href="/index.html">О Нас</a></li>
-                <li><a class="btn btn-link-f-m active" href="/product.html">Продукты</a></li>
-                <li><a class="btn btn-link-f-m" href="/library.html">Библеотека</a></li>
-                <li><a class="btn btn-link-f-m" href="#">Калькулятор</a></li>
-                <li><a class="btn btn-link-f-m" href="#">Контакты</a></li>
+                <li><a class="btn btn-link-f-m active" href="product.html">Продукты</a></li>
+                <li><a class="btn btn-link-f-m" href="faq.html">FAQ</a></li>
+                <li><a class="btn btn-link-f-m" href="#">Форум</a></li>
+                <li><a class="btn btn-link-f-m" href="contacts.html">Контакты</a></li>
             </ul>
 
             <ul class="footer-menu">
-                <li><a class="btn btn-link-f-m" href="/team.html">Команда</a></li>
-                <li><a class="btn btn-link-f-m" href="/library.html">Документация</a></li>
-                <li><a class="btn btn-link-f-m" href="/library.html">Политика конфиденциальности</a></li>
+                <li><a class="btn btn-link-f-m" href="team.html">Команда</a></li>
+                <li><a class="btn btn-link-f-m"  target="_blank" href="assets/specification.pdf">Спецификация</a></li>
             </ul>
-
         </div>
 
 

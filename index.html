@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <title>Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" sizes="32px" href="img/favicon32.png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicon32.png">
-    <link rel="stylesheet" href="css/main.css?2">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-192x192.png" sizes=192x191>
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-512x512.png" sizes=512x512>
+    <link rel="manifest" href="assets/favicon/manifest.webmanifest">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
 <header id="header" class="light">
     <nav class="navbar">
-        <a href="/index.html" class="navbar__brand">
+        <a href="index.html" class="navbar__brand">
             <i class="icon icon-logo"></i>
             <i class="icon icon-logo-text"></i>
         </a>
@@ -27,45 +33,39 @@
 
         </div>
 
-
         <div class="navbar__collapse">
             <ul class="nav">
-                <li class="nav__item active">
-                    <a class="btn nav__link" href="/index.html">О Нас</a>
+                <li class="nav__item">
+                    <a class="btn nav__link" href="product.html">Продукты</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="/product.html">Продукты</a>
-                </li>
-                <li class="nav__item">
-                    <a class="btn nav__link" href="/team.html">Команда</a>
+                    <a class="btn nav__link" href="team.html">Команда</a>
                 </li>
                 <li class="nav__item">
                     <a class="btn nav__link" href="#">Форум</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="/library.html">Библеотека</a>
+                    <a class="btn nav__link" href="contacts.html">Контакты</a>
                 </li>
                 <li class="nav__item">
-                    <a class="btn nav__link" href="#">Eng</a>
+                    <a class="btn nav__link" href="faq.html">FAQ</a>
                 </li>
                 <li class="nav__item">
                     <a class="btn btn-dark" href="#">Оформить заказ</a>
                 </li>
-
             </ul>
         </div>
     </nav>
 </header>
 
 <section id="one">
-
     <div class="screen">
         <div class="screen__inf">
             <h1 class="screen__inf__title text--h1">Больше чем просто майнинг</h1>
             <p class="screen__inf__desc text--desc">BiXBiT Miner - это компактный, легкомасштабируемый мобильный майнер,
                 оснащённый
                 системой иммерсионного охлажения, жизнеобеспечения и удаленного администрирования.</p>
-                <a href="/product.html" class="screen__inf__btn btn btn-link">Продукты</a>
+            <a href="product.html" class="screen__inf__btn btn btn-link">Продукты</a>
         </div>
 
         <div class="screen__img"></div>
@@ -82,7 +82,9 @@
 <div class="sticky">
     <nav class="float-nav">
         <ul class="t--r">
-            <li class="active"><a href="#one" class="btn btn-link-fl-n active">Главная</a></li>
+            <li class="active">
+                <a href="#one" class="btn btn-link-fl-n active">Главная</a>
+            </li>
             <li><a href="#two" class="btn btn-link-fl-n">Охлаждение</a></li>
             <li><a href="#three" class="btn btn-link-fl-n">Конструкция</a></li>
             <li><a href="#four" class="btn btn-link-fl-n">Экономика</a></li>
@@ -186,15 +188,17 @@
                     <i class="list__icon icon icon-energoeffect"></i>
                     <span class="list__desc">Энергоэффективность</span>
                 </li>
+                <li>
+                    <i class="list__icon icon icon-bars"></i>
+                    <span class="list__desc">Производительность</span>
+                </li>
             </ul>
 
-            <p class="screen__desc text--desc">Использование иммерсионного охлаждения создаёт ряд экономических
-                эффектов, которые
-                позволяют
-                не только уменьшить затраты на охлаждение в целом, но и получать дополнительную прибыль за счет
-                стабильной
-                работы устройств в режиме максимальной производительности. Таким образом срок окупаемости оборудования
-                значительно сокращается.
+            <p class="screen__desc text--desc">
+                Использование иммерсионного охлаждения создаёт ряд экономических эффектов, которые позволяют не только
+                уменьшить затраты на охлаждение в целом, но и обеспечить стабильную работу устройств в режиме
+                максимальной производительности. Дополнительная прибыль значительно сокращает срок окупаемости
+                оборудования.
             </p>
 
             <!--<a href="#" class="screen__btn btn btn-link">Продукт</a>-->
@@ -204,14 +208,15 @@
 </div>
 <section id="five" class="t--c">
     <div class="screen">
-        <h4 class="screen__title text--h1">Конфигурация под ключ</h4>
+        <h4 class="screen__title text--h1">Индивидуальная конфигурация</h4>
 
         <p class="screen__desc text--desc">Благодаря модульности конструкции сохраняется возможность для индивидуального
             решения, которое
             легко может быть совмещено с текущим оборудованием заказчика
         </p>
-        <a href="#" class="btn btn-link-light-border">Оформить заказ</a>
-        <a href="/product.html" class="screen__btn btn btn-link">Подробнее о продукте</a>
+
+        <a href="#" class="btn btn-link-light-border">Связаться</a>
+        <a href="product.html" class="screen__btn btn btn-link">Подробнее о продукте</a>
     </div>
 
 </section>
@@ -221,25 +226,21 @@
     <div class="wrap">
 
         <div class="breadcrumbs">
-            <a href="/index.html" class="btn btn-link-f-b">Главная</a>
-            <a href="/index.html" class="btn btn-link-f-b">О Нас</a>
+            <a href="index.html" class="btn btn-link-f-b">Главная</a>
         </div>
 
         <div class="menu">
             <ul class="footer-menu">
-                <li><a class="btn btn-link-f-m active" href="/index.html">О Нас</a></li>
-                <li><a class="btn btn-link-f-m" href="/product.html">Продукты</a></li>
-                <li><a class="btn btn-link-f-m" href="/library.html">Библеотека</a></li>
-                <li><a class="btn btn-link-f-m" href="#">Калькулятор</a></li>
-                <li><a class="btn btn-link-f-m" href="#">Контакты</a></li>
+                <li><a class="btn btn-link-f-m" href="product.html">Продукты</a></li>
+                <li><a class="btn btn-link-f-m" href="faq.html">FAQ</a></li>
+                <li><a class="btn btn-link-f-m" href="#">Форум</a></li>
+                <li><a class="btn btn-link-f-m" href="contacts.html">Контакты</a></li>
             </ul>
 
             <ul class="footer-menu">
-                <li><a class="btn btn-link-f-m" href="/team.html">Команда</a></li>
-                <li><a class="btn btn-link-f-m" href="/library.html">Документация</a></li>
-                <li><a class="btn btn-link-f-m" href="/library.html">Политика конфиденциальности</a></li>
+                <li><a class="btn btn-link-f-m" href="team.html">Команда</a></li>
+                <li><a class="btn btn-link-f-m"  target="_blank" href="assets/specification.pdf">Спецификация</a></li>
             </ul>
-
         </div>
 
 
@@ -267,7 +268,7 @@
                 <li>
             </ul>
             <form class="t--r">
-                <input class="input subscribe" type="text">
+                <input class="input subscribe" type="text" title="Ваша почта">
                 <button class="btn btn-link-dark inverse">Подписаться</button>
             </form>
 
@@ -278,6 +279,9 @@
 </footer>
 
 <script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script src="libs/nav/jquery.nav.js"></script>
 <script src="js/common.js"></script>
 <script src="js/menu.js"></script>

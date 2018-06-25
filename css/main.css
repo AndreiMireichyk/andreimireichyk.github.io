@@ -116,6 +116,9 @@ img {
   vertical-align: middle;
   font-size: 1rem; }
 
+.icon-bars:before {
+  content: "\e90f"; }
+
 .icon-height:before {
   content: "\e925"; }
 
@@ -451,6 +454,26 @@ select:-webkit-autofill:focus {
             flex-grow: 1; }
     .btn_group__item.active {
       border-color: #E947A0; }
+
+.collapse {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  display: block;
+  position: relative;
+  height: 0px;
+  min-height: 0px;
+  overflow: hidden; }
+  .collapse.show {
+    height: auto; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+  -o-transition: height .35s ease;
+  transition: height .35s ease; }
 
 html, body {
   min-height: 100%;
@@ -1080,6 +1103,9 @@ img {
   vertical-align: middle;
   font-size: 1rem; }
 
+.icon-bars:before {
+  content: "\e90f"; }
+
 .icon-height:before {
   content: "\e925"; }
 
@@ -1591,9 +1617,17 @@ section#three {
       section#three .screen__desc {
         font-size: 1rem; } }
   section#three .image {
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    top: 50px;
+    z-index: 1; }
+    @media screen and (max-width: 560px) {
+      section#three .image {
+        position: static; } }
   section#three .list {
-    margin: 0 auto 50px auto; }
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 40px auto; }
     section#three .list::after, section#three .list::before {
       content: "";
       height: 1px;
@@ -3214,6 +3248,77 @@ body {
     @media screen and (max-width: 1100px) {
       body .team-wrapper {
         padding: 85px 20px 40px 20px; } }
+
+.faq {
+  padding: 90px 40px 40px 40px;
+  max-width: 1088px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1100px) {
+    .faq {
+      padding: 90px 20px 40px 20px; } }
+  .faq .question {
+    margin-top: 20px; }
+    .faq .question__title {
+      font-family: "DIN Pro medium";
+      font-size: 26px;
+      cursor: pointer;
+      margin-bottom: 15px; }
+      .faq .question__title[aria-expanded=true] {
+        color: #e5007e; }
+    .faq .question__answer {
+      font-family: "DIN Pro regular";
+      font-size: 18px; }
+      .faq .question__answer h1, .faq .question__answer h2, .faq .question__answer h3, .faq .question__answer h4, .faq .question__answer h5 {
+        font-family: "DIN Pro medium"; }
+      .faq .question__answer ul li {
+        position: relative;
+        padding: 5px 0 5px 15px; }
+      .faq .question__answer ul li:before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        top: 45%;
+        background-color: #e5007e; }
+
+.contacts {
+  padding: 65px 20px 0 20px;
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .contacts__title {
+    font-family: "DIN Pro medium";
+    font-size: 26px;
+    margin-bottom: 10px; }
+  .contacts__desc {
+    font-family: "DIN Pro regular";
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px; }
+    .contacts__desc .btn {
+      font-size: 24px; }
 
 .list {
   display: -webkit-box;
