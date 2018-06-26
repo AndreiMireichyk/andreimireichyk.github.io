@@ -83,23 +83,36 @@
         <div class="props__options devices">
             <div class="options__title">Выберите свое оборудование:</div>
 
-            <div class="btn_group">
-                <a href="#" class="active btn_group__item btn btn-outline-grey">GPU</a>
-                <a href="#" class="btn_group__item btn btn-outline-grey">ASIC</a>
+            <div class="radio_group">
+                <div class="radio_product">
+                    <input type="radio" id="radio1" v-model="device" value="gpu"/>
+                    <label for="radio1">GPU</label>
+                </div>
+                <div class="radio_product">
+                    <input type="radio" id="radio2" v-model="device" value="asic"/>
+                    <label for="radio2">ASIC</label>
+                </div>
             </div>
         </div>
         <div class="props__options devices_type">
             <div class="options__title">Выберите тип оборудования:</div>
 
-            <div class="btn_group">
-                <a href="#" class="active btn_group__item btn btn-outline-grey">С градирней</a>
-                <a href="#" class="btn_group__item btn btn-outline-grey">Без градирни</a>
+            <div class="radio_group individual">
+                <div class="radio_product">
+                    <input type="radio" id="empty" v-model="type" value="empty"/>
+                    <label for="empty">Без градирни</label>
+                </div>
+                <div class="radio_product">
+                    <input type="radio" id="full" v-model="type" value="full"/>
+                    <label for="full">С градирней</label>
+                </div>
                 <a href="#" class="btn_group__item btn btn-outline-grey">Индивидуально</a>
             </div>
+
         </div>
         <div class="props__price">
-            <div class="price_value active">&nbsp;&nbsp;$999.99</div>
-            <div class="price_value">&nbsp;&nbsp;$799.99</div>
+            <div class="price_value" :class="[price_empty]">&nbsp;&nbsp;$799.99</div>
+            <div class="price_value" :class="[price_full]">&nbsp;&nbsp;$999.99</div>
             <div class="price_value">от $699.99</div>
         </div>
         <div class="props__list">
@@ -118,23 +131,31 @@
                 </li>
                 <li class="prop_list__item">
                     <span class="prop_list__item__title">Кол-во устройств</span>
-                    <span class="prop_list__item__value">27 видеокарт / 9 ASIC</span>
+                    <span class="prop_list__item__value">{{count}}шт.</span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-checked"></i></span>
+                    <span class="prop_list__item__title">Теплоноситель</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-checked"></i></span>
+                    <span class="prop_list__item__title">Насос и теплообменник</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-unchecked"></i></span>
-                </li>
-                <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-unchecked"></i></span>
+                    <span class="prop_list__item__title">Датчик температуры</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
             </ul>
         </div>
@@ -146,6 +167,7 @@
 
 
 </section>
+
 
 <section id="product_description" class="product_description">
     <h1 class="product_description__title text--h1">Лучшее решение для домашнего майнера</h1>
@@ -214,8 +236,11 @@
 
 
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/more_cell.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="js/menu.js"></script>
+
 
 
 </body>

@@ -85,58 +85,102 @@
         <div class="props__options devices">
             <div class="options__title">Выберите свое оборудование:</div>
 
-            <div class="btn_group">
-                <a href="#" class="active btn_group__item btn btn-outline-grey">GPU</a>
-                <a href="#" class="btn_group__item btn btn-outline-grey">ASIC</a>
+            <div class="radio_group">
+                <div class="radio_product">
+                    <input type="radio" id="radio1" v-model="device" value="gpu"/>
+                    <label for="radio1">GPU</label>
+                </div>
+                <div class="radio_product">
+                    <input type="radio" id="radio2" v-model="device" value="asic"/>
+                    <label for="radio2">ASIC</label>
+                </div>
             </div>
         </div>
         <div class="props__options devices_type">
             <div class="options__title">Выберите тип оборудования:</div>
 
-            <div class="btn_group">
-                <a href="#" class="active btn_group__item btn btn-outline-grey">Без охлаждения</a>
-                <a href="#" class="btn_group__item btn btn-outline-grey">С охлаждением</a>
+            <div class="radio_group individual">
+                <div class="radio_product">
+                    <input type="radio" id="empty" v-model="type" value="empty"/>
+                    <label for="empty">Без градирни</label>
+                </div>
+                <div class="radio_product">
+                    <input type="radio" id="full" v-model="type" value="full"/>
+                    <label for="full">С градирней</label>
+                </div>
                 <a href="#" class="btn_group__item btn btn-outline-grey">Индивидуально</a>
             </div>
         </div>
         <div class="props__price">
-            <div class="price_value active">$999.99</div>
-            <div class="price_value">$799.99</div>
-            <div class="price_value">$699.99</div>
+            <div class="price_value" :class="[price_empty]">&nbsp;&nbsp;$999.99</div>
+            <div class="price_value" :class="[price_full]">&nbsp;&nbsp;$799.99</div>
+            <div class="price_value">от $699.99</div>
         </div>
         <div class="props__list">
             <ul class="prop_list">
                 <li class="prop_list__item">
                     <span class="prop_list__item__title">Длина</span>
-                    <span class="prop_list__item__value">120см</span>
+                    <span class="prop_list__item__value">750мм</span>
                 </li>
                 <li class="prop_list__item">
                     <span class="prop_list__item__title">Ширина</span>
-                    <span class="prop_list__item__value">80см</span>
+                    <span class="prop_list__item__value">626мм</span>
                 </li>
                 <li class="prop_list__item">
                     <span class="prop_list__item__title">Высота</span>
-                    <span class="prop_list__item__value">60см</span>
+                    <span class="prop_list__item__value">2050мм</span>
                 </li>
                 <li class="prop_list__item">
                     <span class="prop_list__item__title">Кол-во</span>
-                    <span class="prop_list__item__value">12/36шт</span>
+                    <span class="prop_list__item__value">{{count}}шт.</span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-checked"></i></span>
+                    <span class="prop_list__item__title">Щит автоматики/электропитания</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-checked"></i></span>
+                    <span class="prop_list__item__title">Теплоноситель</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-unchecked"></i></span>
+                    <span class="prop_list__item__title">Насосы и теплообменники</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
                 <li class="prop_list__item">
-                    <span class="prop_list__item__title">Характеристики</span>
-                    <span class="prop_list__item__value"><i class="icon icon-unchecked"></i></span>
+                    <span class="prop_list__item__title">Система бездискового запуска</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
+                </li>
+                <li class="prop_list__item">
+                    <span class="prop_list__item__title">Датчик температуры</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
+                </li>
+                <li class="prop_list__item">
+                    <span class="prop_list__item__title">Вспомогательная инфраструктура</span>
+                    <span class="prop_list__item__value">
+                        <i class="icon"
+                           :class="[options ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                    </span>
                 </li>
             </ul>
         </div>
@@ -218,6 +262,8 @@
 </footer>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/more_rack.js"></script>
 
 
 </body>
