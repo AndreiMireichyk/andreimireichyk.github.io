@@ -82,7 +82,7 @@
                 </ul>
             </div>
             <div class="props__btn">
-                <a href="#" class="btn btn-dark"></a>
+                <a @click="showIt()" class="btn btn-dark"></a>
                 <a href="/src/assets/specification.pdf" target="_blank" class="btn btn-link">Спецификация</a>
             </div>
         </div>
@@ -90,6 +90,7 @@
 </template>
 
 <script>
+    import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
     export default {
         name: "Cell",
         props: ['product'],
@@ -104,6 +105,13 @@
         },
         mounted(){
             this.rout = this.$route.path
+        }, components: {
+            Vuedal
+        },
+        methods: {
+            showIt() {
+                VuedalsBus.$emit('new')
+            }
         }
 
     }

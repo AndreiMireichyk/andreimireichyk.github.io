@@ -1,4 +1,5 @@
 <template>
+
     <header id="header" class="light">
         <nav class="navbar">
             <router-link to="/home" class="navbar__brand">
@@ -22,7 +23,7 @@
                         <router-link :to="item.to" class="btn nav__link">{{item.name}}</router-link>
                     </li>
                     <li class="nav__item">
-                        <a class="btn btn-dark" href="#">Оформить заказ</a>
+                        <a class="btn btn-dark" @click="showIt()">Оформить заказ</a>
                     </li>
                 </ul>
             </div>
@@ -31,16 +32,25 @@
 </template>
 
 <script>
+    import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
+
     export default {
         name: "header-layout",
-        data(){
+        data() {
             return {
-               items : [
-                   {name: "Продукты", to: "/products"},
-                   {name: "Команда", to: "/team"},
-                   {name: "Контакты", to: "/contacts"},
-                   {name: "FAQ", to: "/faq"},
-               ]
+                items: [
+                    {name: "Продукты", to: "/products"},
+                    {name: "Команда", to: "/team"},
+                    {name: "Контакты", to: "/contacts"},
+                    {name: "FAQ", to: "/faq"},
+                ]
+            }
+        }, components: {
+            Vuedal
+        },
+        methods: {
+            showIt() {
+                VuedalsBus.$emit('new')
             }
         }
     }

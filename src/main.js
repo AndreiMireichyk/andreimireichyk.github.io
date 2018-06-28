@@ -12,6 +12,7 @@ import Contacts from "./companents/pages/Contacts.vue";
 import Faq from "./companents/pages/Faq.vue";
 
 
+
 Vue.use(VueRouter);
 
 const routes = [

@@ -13,12 +13,23 @@
                 Производство Польша: Ogrodowa 38, Sokółka, Polska
             </p>
         </main>
+
     </div>
 </template>
 
 <script>
+    import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
     export default {
+        components: {
+            Vuedal
+        },
         name: "contacts",
+        methods: {
+            showIt() {
+                VuedalsBus.$emit('new')
+            }
+        },
+
         mounted() {
             document.title = "Контакты";
         }

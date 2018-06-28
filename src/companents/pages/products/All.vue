@@ -134,7 +134,7 @@
                     Благодаря модульности конструкции сохраняется возможность для индивидуального решения, которое легко
                     может быть совмещено с текущим оборудованием заказчика.
                 </div>
-                <a href="#" class="desc__link btn btn-outline-light">Оставить заявку</a>
+                <a @click="showIt()" class="desc__link btn btn-outline-light">Оставить заявку</a>
                 <a class="desc__link btn btn-link" href="/src/assets/specification.pdf" target="_blank">Спецификация</a>
             </div>
 
@@ -143,6 +143,7 @@
 </template>
 
 <script>
+    import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
     export default {
         name: "product-all",
         mounted() {
@@ -191,6 +192,13 @@
         },
         destroyed() {
             $(document).unbind('scroll');
+        }, components: {
+            Vuedal
+        },
+        methods: {
+            showIt() {
+                VuedalsBus.$emit('new')
+            }
         }
     }
 </script>

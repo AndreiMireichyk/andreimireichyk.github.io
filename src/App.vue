@@ -3,20 +3,21 @@
         <header-layout></header-layout>
         <router-view></router-view>
         <footer-layout></footer-layout>
+        <vuedal></vuedal>
     </div>
 </template>
 
 <script>
     import header from './companents/layout/header.vue';
     import footer from './companents/layout/footer.vue';
-    import modal from './companents/layout/modal.vue';
+    import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
 
     export default {
         name: 'app',
         components: {
             "header-layout": header,
             "footer-layout": footer,
-            "modal": modal,
+            Vuedal
         },
         data() {
             return {
