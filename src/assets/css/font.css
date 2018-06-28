@@ -1,0 +1,53 @@
+/*Icon pack*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icon/icomoon.eot?qcjp3f");
+  src: url("../fonts/icon/icomoon.eot?qcjp3f#iefix") format("embedded-opentype"), url("../fonts/icon/icomoon.ttf?qcjp3f") format("truetype"), url("../fonts/icon/icomoon.woff?qcjp3f") format("woff"), url("../fonts/icon/icomoon.svg?qcjp3f#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem; }
+
+/*Gotham Pro*/
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham/GothamPro-Bold.eot");
+  src: local("Gotham Pro Bold"), local("GothamPro-Bold"), url("../fonts/gotham/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro-Bold.woff") format("woff"), url("../fonts/gotham/GothamPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem; }
+
+@font-face {
+  font-family: 'Gotham Pro regular';
+  src: url("../fonts/gotham/GothamPro.eot");
+  src: local("Gotham Pro"), local("GothamPro"), url("../fonts/gotham/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro.woff") format("woff"), url("../fonts/gotham/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/*Din pro*/
+@font-face {
+  font-family: 'DIN Pro medium';
+  src: url("../fonts/din/DINPro-Medium.eot");
+  src: local("DIN Pro Medium"), local("DINPro-Medium"), url("../fonts/din/DINPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-Medium.woff") format("woff"), url("../fonts/din/DINPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DIN Pro Regular';
+  src: url("../fonts/din/DINPro.eot");
+  src: url("../fonts/din/DINPro.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro.woff") format("woff"), url("../fonts/din/DINPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DIN Pro light';
+  src: url("../fonts/din/DINPro-Light.eot");
+  src: local("DIN Pro Light"), local("DINPro-Light"), url("../fonts/din/DINPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-Light.woff") format("woff"), url("../fonts/din/DINPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DIN Pro bold';
+  src: url("../fonts/din/DINPro-Bold.eot");
+  src: local("DIN Pro Bold"), local("DINPro-Bold"), url("../fonts/din/DINPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/din/DINPro-Bold.woff") format("woff"), url("../fonts/din/DINPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }

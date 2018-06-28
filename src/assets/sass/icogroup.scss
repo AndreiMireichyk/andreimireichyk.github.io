@@ -1,0 +1,47 @@
+@import "smart-grid";
+@import "var";
+
+
+.ico_group{
+  @include row-flex();
+  justify-content: center;
+  text-align: center;
+  max-width: 1088px;
+  margin: 0 auto;
+
+
+
+  &__item{
+    @include col();
+
+    @include size-md(4);
+    @include size-sm(6);
+    @include size-xs(12);
+    padding: 10px 50px;
+
+    .item{
+
+      &__title, &__desc{
+        font-family: $font-din-regular;
+        font-size: 15px;
+        color: $dark;
+        display: block;
+      }
+
+      &__ico{
+        display: block;
+        font-size: 38px;
+        line-height: 38px;
+        padding: 5px 0px;
+      }
+    }
+  }
+
+  &.line::after, &.line::before {
+
+    content: "";
+    height: 1px;
+    background: radial-gradient(50% 30%, #dedede, #fff);
+    width: 100%;
+  }
+}

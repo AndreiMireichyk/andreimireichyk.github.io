@@ -1,0 +1,190 @@
+@import "smart-grid";
+@import "var";
+@import "icogroup";
+
+.prod {
+  padding: 120px 40px 40px 55px;
+  text-align: center;
+  @include lg(padding-right, 20px !important);
+  @include lg(padding-left, 20px !important);
+  &__title {
+    @include xs(font-size, 2rem);
+  }
+
+  &__image {
+
+  }
+
+  &__desc {
+    margin: 0 auto;
+    @include row-flex();
+    justify-content: center;
+    & .desc {
+
+      &__action {
+        @include col();
+        padding: 10px 20px;
+        .action {
+          &__link {
+            padding: 10px 25px;
+            margin-bottom: 10px;
+          }
+          &__file_size {
+            font-family: $font-din-regular;
+            font-size: 13px;
+            color: $dark;
+            opacity: 0.6;
+
+          }
+        }
+
+      }
+      &__desc {
+        @include xs(font-size, 1rem);
+        @include sm(text-align, center);
+        @include col();
+        text-align: left;
+        max-width: 595px;
+        padding: 0 20px;
+      }
+    }
+
+  }
+}
+
+.cell {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  @include lg(padding-right, 20px !important);
+  @include lg(padding-left, 20px !important);
+
+  &__title {
+    @include xs(font-size, 2rem);
+    margin-bottom: 15px;
+  }
+  &__desc {
+    margin: 0 auto 15px auto;
+    max-width: 690px;
+    .desc {
+      &__desc {
+        @include xs(font-size, 1rem);
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+  .ico_group{
+    &__item{
+
+      @include size-md(4);
+      @include md(padding ,10px 10px !important);
+    }
+  }
+
+  &__image {
+
+      max-width: 1088px;
+    width: 100%;
+  }
+}
+
+.rack {
+  padding: 150px 40px 0 40px;
+  text-align: center;
+  @include lg(padding-right, 20px !important);
+  @include lg(padding-left, 20px !important);
+  &__title {
+    @include xs(font-size, 2rem);
+    margin-bottom: 15px;
+  }
+  &__desc {
+    margin: 0 auto 15px auto;
+    max-width: 706px;
+    .desc {
+      &__desc {
+        @include xs(font-size, 1rem);
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+  .ico_group{
+    &__item{
+
+      @include size-md(4);
+      @include md(padding ,10px 10px !important);
+    }
+  }
+  &__image {
+    max-width: 1124px;
+    width: 100%;
+  }
+}
+
+.crisper {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  @include lg(padding-right, 20px !important);
+  @include lg(padding-left, 20px !important);
+  &__title {
+    @include xs(font-size, 2rem);
+    margin-bottom: 15px;
+  }
+  &__desc {
+    margin: 0 auto 70px auto;
+    max-width: 750px;
+    .desc {
+      &__desc {
+        @include xs(font-size, 1rem);
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+  .ico_group{
+    &__item{
+
+      @include size-md(3);
+      @include size-xs(6);
+      @include md(padding ,10px 20px !important);
+    }
+  }
+  &__image {
+
+    max-width: 1366px;
+    width: 100%;
+  }
+}
+
+.conf {
+
+  padding: 55px 40px;
+  background-color: #1a1a1a;
+  text-align: center;
+  @include lg(padding-right, 20px !important);
+  @include lg(padding-left, 20px !important);
+  &__title {
+    @include xs(font-size, 2rem);
+    margin-bottom: 15px;
+    color: $light
+  }
+  &__desc {
+    margin: 0 auto;
+    max-width: 720px;
+    .desc {
+      &__desc {
+        @include xs(font-size, 1rem);
+        color: $light;
+        margin-bottom: 55px;
+      }
+      &__link{
+        padding: 10px 22px;
+        margin: 0 25px;
+      }
+
+    }
+  }
+
+}

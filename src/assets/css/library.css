@@ -1,0 +1,396 @@
+.btn {
+  position: relative;
+  -webkit-appearance: none;
+  margin: 0;
+  border: none;
+  overflow: visible;
+  font: inherit;
+  text-transform: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  background: 0;
+  vertical-align: middle;
+  font-family: "DIN Pro medium";
+  line-height: 16px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer; }
+  .btn:active {
+    outline: none;
+    color: #E947A0;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn:hover {
+    outline: none; }
+  .btn:disabled, .btn[disabled], .btn.disabled {
+    background: #fff !important;
+    color: #bcbcbc !important;
+    border: 2px solid #bcbcbc !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
+  .btn-dark {
+    padding: 12px 18px;
+    background: #222222;
+    color: #fff;
+    font-family: "DIN Pro regular"; }
+    .btn-dark:hover {
+      color: #fff !important;
+      background: #454545; }
+  .btn-link-dark {
+    padding: 12px 18px;
+    background: #222222;
+    color: #fff;
+    font-family: "DIN Pro regular"; }
+    .btn-link-dark:hover {
+      color: #fff !important;
+      background: #454545; }
+    .btn-link-dark.inverse {
+      border: 1px solid #222222;
+      color: #222222;
+      background: none; }
+  .btn-outline-light {
+    font-family: "DIN Pro regular";
+    padding: 12px 18px;
+    background: #222222;
+    color: #fff;
+    border: 1px solid #fff; }
+    .btn-outline-light:hover {
+      color: #E947A0 !important;
+      border-color: #E947A0; }
+  .btn-link-light-border {
+    font-family: "DIN Pro regular";
+    padding: 12px 18px;
+    background: #222222;
+    color: #fff;
+    border: 1px solid #fff; }
+  .btn-outline-grey {
+    font-family: "DIN Pro regular";
+    padding: 12px 18px;
+    color: #222222;
+    border: 1px solid #e5e5e5; }
+    .btn-outline-grey:hover {
+      border-color: #E947A0; }
+  .btn-link-f-b {
+    font-family: "DIN Pro regular";
+    font-size: 13px;
+    color: #707070;
+    line-height: 17px; }
+    .btn-link-f-b:after {
+      content: " /";
+      opacity: 0.2; }
+    .btn-link-f-b:last-child:after {
+      content: ""; }
+    .btn-link-f-b:hover {
+      color: #222222; }
+  .btn-social {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    margin-left: 1px;
+    background: #D8D8D8;
+    line-height: 30px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .btn-social i {
+      font-size: 38px;
+      color: #536060; }
+    .btn-social:hover {
+      background: #a6a6a6; }
+  .btn-link-f-m {
+    font-family: "DIN Pro medium";
+    font-size: 13px;
+    color: #222222;
+    line-height: 16px; }
+    .btn-link-f-m:hover {
+      color: #E947A0 !important; }
+  .btn-link {
+    color: #E947A0; }
+    .btn-link::after {
+      content: "";
+      border-bottom: 2px solid #E947A0;
+      display: block;
+      margin-top: 7px;
+      width: 68%;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .btn-link:hover::after {
+      width: 100%; }
+  .btn-link-menu {
+    color: #222222 !important; }
+    .btn-link-menu.active, .btn-link-menu:hover {
+      color: #E947A0 !important; }
+  .btn-link-fl-n {
+    font-family: "DIN Pro regular";
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222222;
+    opacity: 0.4; }
+    .btn-link-fl-n:hover {
+      opacity: 1 !important; }
+
+.library {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 90px 0px 0px 0px;
+  background-color: #ffffff;
+  max-width: 1088px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1100px) {
+    .library {
+      padding: 90px 20px 0px 20px; } }
+  @media screen and (max-width: 560px) {
+    .library {
+      padding: 90px 20px 0px 20px; } }
+  .library__nav_toggler {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #39343a;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2; }
+    @media screen and (max-width: 1100px) {
+      .library__nav_toggler {
+        display: block; } }
+    .library__nav_toggler .icon {
+      color: #fff; }
+    .library__nav_toggler:hover .icon {
+      color: #e5007e; }
+    .library__nav_toggler.open .icon:before {
+      content: "\e90a"; }
+  .library .navigation {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: -webkit-calc(25% - 0px);
+    width: calc(25% - 0px); }
+    @media screen and (max-width: 1100px) {
+      .library .navigation {
+        display: none; } }
+    @media screen and (max-width: 1100px) {
+      .library .navigation {
+        position: fixed;
+        top: 65px;
+        bottom: 0px;
+        z-index: 1;
+        left: -320px;
+        display: block;
+        background-color: #fff;
+        width: 300px;
+        border-right: 1px solid #e5e5e5;
+        overflow: auto;
+        -webkit-transition: left 0.5s;
+        -o-transition: left 0.5s;
+        transition: left 0.5s;
+        padding-left: 20px; } }
+    .library .navigation.open {
+      left: 0px; }
+    .library .navigation__title {
+      font-family: "DIN Pro medium";
+      font-size: 26px;
+      color: #222222; }
+    .library .navigation__sub_title {
+      font-family: "DIN Pro medium";
+      font-size: 17px;
+      color: #222222;
+      margin-top: 25px; }
+    .library .navigation .library_list .active:before {
+      position: absolute;
+      left: 0;
+      top: 48%;
+      display: block;
+      content: "";
+      height: 4px;
+      width: 4px;
+      background: #e5007e; }
+    .library .navigation .library_list__item {
+      position: relative;
+      padding: 7.5px 20px; }
+      .library .navigation .library_list__item__link {
+        text-align: left;
+        font-family: "DIN Pro regular" !important;
+        font-size: 15px !important;
+        color: #222222; }
+        .library .navigation .library_list__item__link:hover {
+          color: #e5007e; }
+  .library .library__content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: -webkit-calc(75% - 0px);
+    width: calc(75% - 0px); }
+    @media screen and (max-width: 1100px) {
+      .library .library__content {
+        width: -webkit-calc(100% - 0px);
+        width: calc(100% - 0px); } }
+    .library .library__content .content {
+      border-left: 1px solid #f0f0f0;
+      padding-left: 50px;
+      margin-left: 10px; }
+      @media screen and (max-width: 1100px) {
+        .library .library__content .content {
+          border-left: none; } }
+      @media screen and (max-width: 1100px) {
+        .library .library__content .content {
+          padding-left: 0; } }
+      .library .library__content .content_h1 {
+        font-family: "DIN Pro bold";
+        font-size: 44px;
+        margin-bottom: 15px; }
+        @media screen and (max-width: 560px) {
+          .library .library__content .content_h1 {
+            font-size: 34px; } }
+      .library .library__content .content_h2 {
+        font-family: "DIN Pro bold";
+        font-size: 36px;
+        margin-bottom: 15px; }
+        @media screen and (max-width: 560px) {
+          .library .library__content .content_h2 {
+            font-size: 26px; } }
+      .library .library__content .content_desc {
+        font-family: "DIN Pro regular";
+        font-size: 17px;
+        line-height: 23px;
+        margin-bottom: 50px; }
+        @media screen and (max-width: 560px) {
+          .library .library__content .content_desc {
+            font-size: 15px; } }
+    .library .library__content .hot_nav {
+      padding-left: 60px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      margin-left: 0px;
+      margin-right: 0px;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      @media screen and (max-width: 1100px) {
+        .library .library__content .hot_nav {
+          padding-left: 0; } }
+      .library .library__content .hot_nav__tags {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        word-wrap: break-word;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: -webkit-calc(41.66667% - 0px);
+        width: calc(41.66667% - 0px);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-bottom: 20px; }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__tags {
+            width: -webkit-calc(100% - 0px);
+            width: calc(100% - 0px); } }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__tags {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center; } }
+        .library .library__content .hot_nav__tags .tag {
+          font-family: "DIN Pro regular";
+          font-size: 15px;
+          background: #efefef;
+          padding: 2px 27px;
+          margin-right: 15px;
+          -webkit-border-radius: 2px;
+                  border-radius: 2px;
+          max-height: 26px;
+          margin-bottom: 10px; }
+      .library .library__content .hot_nav__link {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        word-wrap: break-word;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: -webkit-calc(58.33333% - 0px);
+        width: calc(58.33333% - 0px);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-bottom: 20px; }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__link {
+            width: -webkit-calc(100% - 0px);
+            width: calc(100% - 0px); } }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__link {
+            width: 100%; } }
+        @media screen and (max-width: 1100px) {
+          .library .library__content .hot_nav__link {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center; } }
+        .library .library__content .hot_nav__link .next, .library .library__content .hot_nav__link .prev {
+          padding: 0 15px;
+          margin-bottom: 10px; }
+          .library .library__content .hot_nav__link .next .btn, .library .library__content .hot_nav__link .prev .btn {
+            font-family: "DIN Pro regular";
+            font-size: 16px;
+            color: #e947a0; }
+            .library .library__content .hot_nav__link .next .btn .icon, .library .library__content .hot_nav__link .prev .btn .icon {
+              font-size: 8px; }
+            .library .library__content .hot_nav__link .next .btn:hover, .library .library__content .hot_nav__link .prev .btn:hover {
+              color: #e5007e; }
+          .library .library__content .hot_nav__link .next .left, .library .library__content .hot_nav__link .prev .left {
+            position: relative;
+            top: -1px;
+            -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                    transform: rotate(90deg); }
+          .library .library__content .hot_nav__link .next .right, .library .library__content .hot_nav__link .prev .right {
+            position: relative;
+            top: -1px;
+            -webkit-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                    transform: rotate(-90deg); }

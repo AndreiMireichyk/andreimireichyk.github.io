@@ -1,0 +1,223 @@
+@import "var";
+@import "btn";
+@import "smart-grid";
+
+.navbar {
+  height: inherit;
+  position: relative;
+
+  @include row-flex();
+  justify-content: space-between;
+  align-items: center;
+
+  &__brand {
+    @include col();
+    @include lg(line-height, 30px);
+    .icon-logo {
+      @include lg(font-size, 30px);
+      @include lg(line-height, 30px);
+    }
+    .icon-logo-text {
+      @include lg(display, none);
+    }
+
+    .dark-logo-text {
+      font-family: $font-gotham;
+      @include lg(display, none);
+    }
+
+    text-decoration: none;
+    font-size: 36px;
+    line-height: 36px;
+    color: $magenta-dark;
+
+  }
+
+  &__toggler, &__shopping {
+
+    @include lg(display, block);
+    display: none;
+    text-decoration: none;
+    .icon {
+      margin-left: 25px;
+      color: $dark;
+      &-shopping {
+        font-size: 25px;
+      }
+      &-menu {
+        font-size: 19px;
+        line-height: 27px;
+      }
+      &-unchecked {
+        font-size: 19px;
+      }
+      &:hover {
+        color: $magenta-dark;
+      }
+    }
+
+  }
+
+  //opened menu
+  &__toggler.open {
+    .icon:before {
+      content: "\e90a";
+    }
+  }
+  //fix hide shop
+  &__fix_position {
+    @include row-flex;
+    flex-direction: row-reverse;
+  }
+
+  //hide shop
+  &__toggler.open + &__shopping {
+    display: none;
+  }
+
+  //desctop menu
+  &__collapse {
+    @include col();
+    @include lg(display, none);
+    .nav {
+      @include row-flex();
+
+      &__item {
+        margin-left: 37px;
+        align-self: center;
+        & .nav__link.router-link-active{
+          color: $magenta-dark !important;
+
+        }
+      }
+
+      &__link {
+        font-family: $font-din-regular;
+        font-size: 16px;
+        line-height: 20px;
+        color: $dark;
+        &:hover {
+          color: $magenta !important;
+        }
+      }
+
+    }
+  }
+
+  //mobile menu
+  &__collapse.open {
+    @include lg(display, block);
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $light;
+    overflow: auto;
+
+    .nav {
+      flex-direction: column;
+
+      padding: 0 20px 0 20px;
+
+      background-color: $light;
+      &__item {
+        @include row-flex();
+        justify-content: space-between;
+        align-items: center;
+        color: $dark;
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid #e8e9ed;
+        padding: 16px 0 13px 0;
+        &:after {
+          font-size: 13px;
+          text-align: right;
+          font-family: $font-icon;
+          content: "\e90b";
+        }
+
+        &:last-child:after {
+          content: "\e906";
+          font-size: 23px;
+          font-family: $font-icon;
+          color: $magenta;
+        }
+      }
+
+      &__link, .btn {
+        font-family: $font-din-medium;
+        font-size: 18px;
+        line-height: 23px;
+        color: $dark;
+      }
+
+      .btn-dark {
+        background: none;
+        margin: 0;
+        padding: 0;
+        color: $magenta;
+        &:hover {
+          color: $magenta !important;
+        }
+      }
+
+    }
+  }
+
+}
+
+.dark .navbar {
+
+  &__toggler, &__shopping {
+    .icon {
+      margin-left: 25px;
+      color: $light;
+      &-menu {
+        &:hover {
+          color: $magenta-dark;
+        }
+      }
+    }
+  }
+
+  .dark-logo-text{
+    font-size: 22px;
+    line-height: 36px;
+    font-family: $font-gotham-regular;
+    color: $light;
+    text-decoration: none;
+  }
+
+  .nav {
+    &__link {
+      font-family: $font-din-regular;
+      font-size: 16px;
+      line-height: 20px;
+      color: $light;
+      &:hover {
+        color: $magenta-dark !important;
+      }
+    }
+
+    .btn-dark{
+      position: relative;
+      top: 2px;
+      background: none;
+      &::after {
+        content: "";
+        border-bottom: 2px solid $light;
+        display: block;
+        margin-top: 3px;
+        width: 68%;
+        transition: all 0.2s;
+      }
+
+      &:hover::after{
+        width: 100%;
+      }
+    }
+  }
+}

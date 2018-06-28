@@ -1,0 +1,37 @@
+.contacts {
+  padding: 65px 20px 0 20px;
+  margin: 0 auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .contacts__title {
+    font-family: "DIN Pro medium";
+    font-size: 26px;
+    margin-bottom: 10px; }
+  .contacts__desc {
+    font-family: "DIN Pro regular";
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px; }
+    .contacts__desc .btn {
+      font-size: 24px; }

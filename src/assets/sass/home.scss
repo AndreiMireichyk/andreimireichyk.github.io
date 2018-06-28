@@ -1,0 +1,270 @@
+@import "smart-grid";
+@include reset();
+@import "var";
+@import "font";
+@import "icon";
+@import "btn";
+@import "text";
+@import "input";
+
+section#one {
+  height: 100vh;
+  padding-top: 65px;
+  box-sizing: border-box !important;
+  padding-right: 0 !important;
+  position: relative;
+
+
+  @include lg(margin-left, 0px);
+  @include xs(height, auto !important);
+
+  //@include wrapper-full();
+
+  .screen {
+    @include row-flex();
+
+    height: 100%;
+
+    &__inf {
+      @include col();
+      @include size(4);
+      @include lg(margin-left, 20px);
+      @include lg(margin-right, 20px);
+      //lg
+      @include size-lg(12);
+      @include lg(padding-top, 30px);
+      @include lg(padding-left, 0px);
+      @include lg(text-align, center);
+      @include lg(align-self, center);
+
+      padding-top: 200px;
+      padding-left: 40px;
+      box-sizing: padding-box;
+
+      &__title {
+        @include xs(font-size, 2rem);
+        margin-bottom: 15px;
+      }
+
+      &__desc {
+        @include lg(margin, 0 auto 15px);
+        @include xs(font-size, 1rem);
+        margin-bottom: 15px;
+        max-width: 500px;
+      }
+
+      &__btn {
+        font-size: 19px;
+      }
+    }
+
+    &__img {
+      @include col();
+      @include size(8);
+      //lg
+      @include size-lg(12);
+      @include lg(background, url("../img/b1.png") no-repeat center center);
+      @include lg(background-size, contain);
+      @include lg(min-height, 300px);
+
+      //sm
+      @include sm(background-size, cover);
+
+      //xlg
+      background: url("../img/bg1.jpg") no-repeat center right;
+      background-size: 100% auto;
+
+    }
+
+  }
+
+  .more {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+
+    @include row-flex();
+    flex-wrap: unset;
+    justify-content: space-around;
+    align-items: center;
+    &__line {
+      height: 1px;
+      background: #dedede;
+      margin-right: 40px;
+      flex-basis: 100%;
+    }
+    &__text {
+      white-space: nowrap;
+      margin-right: 15px;
+      font-family: $font-din-light;
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0.7;
+
+    }
+
+    &__icon {
+      flex-grow: 1;
+      color: $dark;
+      opacity: 0.7;
+      font-size: 7px;
+      margin-right: 40px;
+
+    }
+
+  }
+}
+
+section#two {
+
+  padding: 65px 40px 100px 40px;
+  text-align: center;
+
+  .screen {
+    &__title {
+      @include xs(font-size, 2rem);
+      margin-bottom: 15px;
+    }
+
+    &__desc{
+      @include lg(margin, 0 auto 15px);
+      @include xs(font-size, 1rem);
+      margin: 0 auto 15px auto;
+      max-width: 720px;
+    }
+
+    &__btn {
+      @include xs(font-size, 19px);
+    }
+  }
+
+
+  .list {
+    margin: 24px auto 0 auto;
+
+  }
+
+  .image {
+    max-width: 800px;
+    width: 100%;
+    margin-top: 40px
+  }
+}
+
+section#three {
+
+  padding: 100px 40px;
+  background: #F9F9F9;
+  .screen{
+
+
+    &__title{
+      @include xs(font-size, 2rem);
+      margin-bottom: 18px;
+    }
+    &__desc{
+      @include lg(margin, 0 auto 15px);
+      @include xs(font-size, 1rem);
+      margin: 0 auto 60px auto;
+      max-width: 721px;
+    }
+  }
+
+
+
+  .image {
+    width: 100%;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+  }
+
+  .list {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 50px auto;
+    &::after, &::before {
+
+      content: "";
+      height: 1px;
+      background: radial-gradient(50% 30%, #dedede, #f9f9f9);
+      width: 100%;
+    }
+
+  }
+
+  a {
+    font-size: 17px;
+  }
+}
+
+section#four {
+  padding: 100px 40px;
+  .screen {
+
+    &__title {
+      @include xs(font-size, 2rem);
+      margin-bottom: 35px;
+    }
+    &__desc {
+      @include lg(margin, 0 auto 15px);
+      @include xs(font-size, 1rem);
+      margin: 0 auto 18px auto;
+      max-width: 721px;
+    }
+
+    .screen__btn {
+      @include xs(font-size, 19px);
+    }
+  }
+
+
+
+  .list {
+    margin: 0 auto 30px auto;
+    &::after, &::before {
+      height: 0;
+    }
+
+    .icon-energoeffect {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+  }
+
+}
+
+section#five {
+  padding: 80px 40px 55px 40px;
+  background: #1a1a1a;
+  .screen{
+
+
+    &__title{
+      @include xs(font-size, 2rem);
+      color: $light;
+      margin-bottom: 15px;
+    }
+    &__desc{
+      @include lg(margin, 0 auto 15px);
+      @include xs(font-size, 1rem);
+      margin: 0 auto 35px auto;
+      color: $light;
+      max-width: 721px;
+    }
+
+    .screen__btn{
+      @include xs(font-size, 19px);
+      @include xs(margin-top, 18px);
+
+    }
+  }
+
+
+
+  a {
+    margin: 0px 18px;
+  }
+
+}

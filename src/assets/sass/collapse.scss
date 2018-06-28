@@ -1,0 +1,25 @@
+@import "var";
+
+//triger
+
+
+
+.collapse{
+  transition: all 0.5s;
+  display: block;
+  position: relative;
+  height: 0px;
+  min-height: 0px;
+  overflow: hidden;
+
+  &.show{
+    height: auto;
+  }
+}
+
+.collapsing{
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease;
+}

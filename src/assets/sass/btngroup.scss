@@ -1,0 +1,14 @@
+@import "smart-grid";
+@import "var";
+
+.btn_group{
+  @include row-flex();
+  justify-content: space-between;
+  &__item{
+    flex-grow: 1;
+    &.active{
+      border-color: $magenta;
+    }
+  }
+
+}

@@ -1,0 +1,53 @@
+.ico_group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  max-width: 1088px;
+  margin: 0 auto; }
+  .ico_group__item {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px 50px; }
+    @media screen and (max-width: 960px) {
+      .ico_group__item {
+        width: -webkit-calc(33.33333% - 0px);
+        width: calc(33.33333% - 0px); } }
+    @media screen and (max-width: 780px) {
+      .ico_group__item {
+        width: -webkit-calc(50% - 0px);
+        width: calc(50% - 0px); } }
+    @media screen and (max-width: 560px) {
+      .ico_group__item {
+        width: -webkit-calc(100% - 0px);
+        width: calc(100% - 0px); } }
+    .ico_group__item .item__title, .ico_group__item .item__desc {
+      font-family: "DIN Pro regular";
+      font-size: 15px;
+      color: #222222;
+      display: block; }
+    .ico_group__item .item__ico {
+      display: block;
+      font-size: 38px;
+      line-height: 38px;
+      padding: 5px 0px; }
+  .ico_group.line::after, .ico_group.line::before {
+    content: "";
+    height: 1px;
+    background: -webkit-radial-gradient(50% 30%, #dedede, #fff);
+    background: -o-radial-gradient(50% 30%, #dedede, #fff);
+    background: radial-gradient(50% 30%, #dedede, #fff);
+    width: 100%; }

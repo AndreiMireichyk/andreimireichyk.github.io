@@ -1,0 +1,19 @@
+.collapse {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  display: block;
+  position: relative;
+  height: 0px;
+  min-height: 0px;
+  overflow: hidden; }
+  .collapse.show {
+    height: auto; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+  -o-transition: height .35s ease;
+  transition: height .35s ease; }

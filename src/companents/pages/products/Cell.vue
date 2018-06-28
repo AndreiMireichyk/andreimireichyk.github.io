@@ -1,0 +1,114 @@
+<template>
+
+        <div class="product__props props">
+            <div class="product__breadcrumbs breadcrumbs">
+                <router-link to="/home" class="btn btn-link-f-b">Главная</router-link>
+                <router-link to="/products" class="btn btn-link-f-b">Продукты</router-link>
+                <router-link :to="rout" class="btn btn-link-f-b">{{product.prod_type}}</router-link>
+            </div>
+
+            <h1 class="product__title"><span class="title_sub">{{product.prod_type}}</span> {{product.name}}</h1>
+            <div class="props__desc">
+                {{product[device].min_desc}}
+            </div>
+            <div class="props__options devices">
+                <div class="options__title">Выберите свое оборудование:</div>
+
+                <div class="radio_group">
+                    <div class="radio_product">
+                        <input type="radio" id="radio1" v-model="device" value="gpu"/>
+                        <label for="radio1">GPU</label>
+                    </div>
+                    <div class="radio_product">
+                        <input type="radio" id="radio2" v-model="device" value="asic"/>
+                        <label for="radio2">ASIC</label>
+                    </div>
+                </div>
+            </div>
+            <div class="props__options devices_type">
+                <div class="options__title">Выберите тип оборудования:</div>
+
+                <div class="radio_group individual">
+                    <div class="radio_product">
+                        <input type="radio" id="empty" v-model="type" value="empty"/>
+                        <label for="empty">Без градирни</label>
+                    </div>
+                    <div class="radio_product">
+                        <input type="radio" id="full" v-model="type" value="full"/>
+                        <label for="full">С градирней</label>
+                    </div>
+                    <a href="#" class="btn_group__item btn btn-outline-grey">Индивидуально</a>
+                </div>
+
+            </div>
+            <div class="props__price">
+                <div class="price_value" :class="[other_opt_status ? '' :'active']">$799.99</div>
+                <div class="price_value" :class="[other_opt_status ? 'active': '']">$999.99</div>
+                <div class="price_value">от $699.99</div>
+            </div>
+            <div class="props__list">
+                <ul class="prop_list">
+                    <!--default options-->
+                    <li class="prop_list__item"
+                    v-for="prop in product[device].default_options">
+
+                        <span class="prop_list__item__title">{{prop.name}}</span>
+
+                        <span v-if="prop.type == 'text'" class="prop_list__item__value">{{prop.value}}</span>
+
+                        <span v-else class="prop_list__item__value">
+                            <i class="icon"
+                               :class="[prop.value ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                        </span>
+                    </li>
+                    <!--default options-->
+
+                    <!--other options-->
+                    <li class="prop_list__item"
+                        v-for="prop in product[device].other_options">
+
+                        <span class="prop_list__item__title">{{prop.name}}</span>
+
+                        <span v-if="prop.type == 'text'" class="prop_list__item__value">{{prop.value}}</span>
+
+                        <span v-else class="prop_list__item__value">
+                            <i class="icon"
+                               :class="[other_opt_status ? 'icon-checked' : 'icon-unchecked']">
+                        </i>
+                        </span>
+                    </li>
+                    <!--other options-->
+                </ul>
+            </div>
+            <div class="props__btn">
+                <a href="#" class="btn btn-dark"></a>
+                <a href="/src/assets/specification.pdf" target="_blank" class="btn btn-link">Спецификация</a>
+            </div>
+        </div>
+
+</template>
+
+<script>
+    export default {
+        name: "Cell",
+        props: ['product'],
+
+        data () {
+            return {device: "gpu", type: "empty", rout: "1"}
+        },
+        computed:{
+            other_opt_status: function(){
+                return this.type === 'full';
+            }
+        },
+        mounted(){
+            this.rout = this.$route.path
+        }
+
+    }
+</script>
+
+<style scoped>
+
+</style>
