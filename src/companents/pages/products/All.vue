@@ -143,6 +143,7 @@
 </template>
 
 <script>
+    import amoform from '../../layout/amoform.vue';
     import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
     export default {
         name: "product-all",
@@ -197,7 +198,12 @@
         },
         methods: {
             showIt() {
-                VuedalsBus.$emit('new')
+                VuedalsBus.$emit('new', {
+                    name: 'AmoForm',
+                    size: 'sm',
+                    title : "Заполните форму",
+                    component: amoform
+                });
             }
         }
     }

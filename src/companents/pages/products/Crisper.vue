@@ -59,6 +59,7 @@
 
 <script>
     import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
+    import amoform from '../../layout/amoform.vue';
     export default {
         name: "Crisper",
         props: ['product'],
@@ -74,7 +75,12 @@
         },
         methods: {
             showIt() {
-                VuedalsBus.$emit('new')
+                VuedalsBus.$emit('new', {
+                    name: 'AmoForm',
+                    size: 'sm',
+                    title : "Заполните форму",
+                    component: amoform
+                });
             }
         }
 

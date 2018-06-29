@@ -158,7 +158,9 @@
 
         </div>
         <section id="five" class="t--c">
+
             <div class="screen">
+                <div ref="amoform"></div>
                 <h4 class="screen__title text--h1">Индивидуальная конфигурация</h4>
 
                 <p class="screen__desc text--desc">Благодаря модульности конструкции сохраняется возможность для
@@ -178,13 +180,22 @@
 
 <script>
     import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
+    import amoform from '../layout/amoform.vue';
     export default {
         name: "home", components: {
             Vuedal
         },
+        data(){
+            return {src : "ulr_script"}
+        },
         methods: {
             showIt() {
-                VuedalsBus.$emit('new')
+                VuedalsBus.$emit('new', {
+                    name: 'AmoForm',
+                    size: 'sm',
+                    title : "Заполните форму",
+                    component: amoform
+                });
             }
         },
         mounted() {

@@ -33,6 +33,7 @@
 
 <script>
     import {default as Vuedals, Component as Vuedal, Bus as VuedalsBus} from 'vuedals';
+    import amoform from './amoform.vue';
 
     export default {
         name: "header-layout",
@@ -50,7 +51,12 @@
         },
         methods: {
             showIt() {
-                VuedalsBus.$emit('new')
+                VuedalsBus.$emit('new', {
+                    name: 'AmoForm',
+                    size: 'sm',
+                    title : "Заполните форму",
+                    component: amoform
+                });
             }
         }
     }

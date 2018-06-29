@@ -3,7 +3,7 @@
         <header-layout></header-layout>
         <router-view></router-view>
         <footer-layout></footer-layout>
-        <vuedal></vuedal>
+        <vuedal><div>asd asdas asdasd asdas</div></vuedal>
     </div>
 </template>
 
