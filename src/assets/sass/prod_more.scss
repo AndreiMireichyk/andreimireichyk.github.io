@@ -58,7 +58,16 @@
     padding-top: 15px;
 
     .props {
-      &__desc {
+      &__individual{
+        @include lg(text-align, center);
+        @include xs(padding, 20px 20px);
+        font-family: $font-din-regular;
+        font-size: 17px;
+        line-height: 22px;
+        color: $dark;
+        margin-bottom: 25px;
+      }
+      &__desc{
         @include lg(text-align, center);
         @include xs(order, 2);
         @include xs(padding, 0 20px);
@@ -76,6 +85,7 @@
           margin-bottom: 30px;
           @include sm(padding, 40px 20px 0 20px);
           @include xs(padding, 0px 20px 0 20px);
+
           @include xs-block {
             .btn_group__item:nth-child(1), .btn_group__item:nth-child(2) {
               flex-basis: 50%;
@@ -87,6 +97,7 @@
           margin-bottom: 30px;
           @include xs(margin, 0);
           @include sm(padding, 0px 20px 0 20px);
+          @include xs(margin-bottom, 20px);
           @include xs-block {
             .radio_group.individual .radio_product:nth-child(1), .radio_group.individual .radio_product:nth-child(2) {
               flex-basis: 50%;
@@ -95,8 +106,10 @@
               padding-left: 0;
               padding-right: 0;
               font-size: 15px;
+
             }
-            .radio_group a:nth-child(3) {
+
+            .radio_group.individual .radio_product:nth-child(3) label{
               flex-basis: 100%;
               margin-right: -20px;
               margin-left: -20px;
@@ -106,6 +119,7 @@
               padding: 15px 0;
 
             }
+
           }
 
         }
@@ -217,8 +231,17 @@
           font-size: 17px;
           margin-right: 40px;
 
-          &:nth-child(1):before {
+          &.btn-dark:before {
             content: "Оформить заказ";
+          }
+          &.btn-dark.ind:before {
+            content: "Связаться";
+          }
+          &.btn-link.ind:before {
+            content: "Связаться";
+          }
+          &.btn-link.ind:after {
+            @include xs(display, none);
           }
 
           @include xs-block {

@@ -37,19 +37,23 @@
                         <input type="radio" id="full" v-model="type" value="full"/>
                         <label for="full">С градирней</label>
                     </div>
-                    <a href="#" class="btn_group__item btn btn-outline-grey">Индивидуально</a>
+                    <div class="radio_product">
+                        <input type="radio" id="individual" v-model="type" value="individual"/>
+                        <label for="individual">Индивидуально</label>
+                    </div>
                 </div>
 
             </div>
             <div class="props__price">
-                <div class="price_value" :class="[other_opt_status ? '' :'active']">$799.99</div>
-                <div class="price_value" :class="[other_opt_status ? 'active': '']">$999.99</div>
-                <div class="price_value">от $699.99</div>
+                <div class="price_value" :class="[type == 'empty' ? 'active': '']">$799.99</div>
+                <div class="price_value" :class="[type == 'full' ? 'active': '']">$999.99</div>
+                <div class="price_value" :class="[type == 'individual' ? 'active': '']">от $699.99</div>
             </div>
             <div class="props__list">
                 <ul class="prop_list">
                     <!--default options-->
                     <li class="prop_list__item"
+                    v-if="type != 'individual'"
                     v-for="prop in product[device].default_options">
 
                         <span class="prop_list__item__title">{{prop.name}}</span>
@@ -66,6 +70,7 @@
 
                     <!--other options-->
                     <li class="prop_list__item"
+                        v-if="type != 'individual'"
                         v-for="prop in product[device].other_options">
 
                         <span class="prop_list__item__title">{{prop.name}}</span>
@@ -81,7 +86,21 @@
                     <!--other options-->
                 </ul>
             </div>
-            <div class="props__btn">
+            <div class="props__individual"
+                 v-if="type == 'individual'"
+            >
+                При индивидуальной компоновке оборудования, наши специалисты
+                помогут подобрать конфигурацию установки, полностью отвечающую
+                Вашим предпочтениям. Таким образом, на базе программно-
+                технического комплекса “BiXBiT” Вы сможете включить в сборку
+                только самые необходимые опции.
+            </div>
+            <div class="props__btn"
+                 v-if="type == 'individual'">
+                <a @click="showIt()" class="btn btn-link ind"></a>
+            </div>
+            <div class="props__btn"
+                 v-else>
                 <a @click="showIt()" class="btn btn-dark"></a>
                 <a href="/src/assets/specification.pdf" target="_blank" class="btn btn-link">Спецификация</a>
             </div>

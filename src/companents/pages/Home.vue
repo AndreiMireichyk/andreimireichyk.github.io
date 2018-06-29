@@ -104,7 +104,7 @@
                     </li>
                     <li>
                         <i class="list__icon icon icon-mashtabiruemost"></i>
-                        <span class="list__desc">масштабируемость</span>
+                        <span class="list__desc">Масштабируемость</span>
                     </li>
                     <li>
                         <i class="list__icon icon icon-bezopasn"></i>

@@ -14,11 +14,11 @@
 
 
             <section id="prod" class="prod">
-                <h1 class="prod__title text--h1">Продукция BiXBiT</h1>
+                <h1 class="prod__title text--h1">Продукция компании BiXBiT</h1>
                 <img src="/src/assets/img/prod_prod.png" alt="Продукты компании" class="prod__image">
                 <div class="prod__desc desc">
                     <div class="desc__action action">
-                        <a href="assets/specification.pdf" target="_blank" class="action__link btn btn-dark">Спецификация</a>
+                        <a href="/src/assets/specification.pdf" target="_blank" class="action__link btn btn-dark">Спецификация</a>
                         <br>
                         <span class="action__file_size">PDF 4.5mb</span>
                     </div>
@@ -110,7 +110,7 @@
                     <router-link to="/products/crisper" class="desc__link btn btn-link">Подробнее</router-link>
                 </div>
                 <img src="/src/assets/img/prod_crisper.png" alt="Стойка рабочее название" class="crisper__image">
-                <ul class="ico_group">
+                <!--<ul class="ico_group">
                     <li class="ico_group__item item">
                         <i class="item__ico ico icon-bio"></i>
                     </li>
@@ -124,7 +124,7 @@
                         <i class="item__ico ico icon-bio"></i>
                     </li>
 
-                </ul>
+                </ul>-->
             </section>
         </div>
         <section id="conf" class="conf">

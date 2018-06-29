@@ -5,7 +5,6 @@
 
                 <div class="breadcrumbs">
                     <a href="index.html" class="btn btn-link-f-b">Главная</a>
-                    <a href="team.html" class="btn btn-link-f-b">Команда</a>
                 </div>
 
                 <div class="menu">

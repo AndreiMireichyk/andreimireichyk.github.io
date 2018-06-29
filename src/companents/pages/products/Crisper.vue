@@ -9,13 +9,13 @@
 
             <h1 class="product__title"><span class="title_sub">{{product.prod_type}}</span> {{product.name}}</h1>
             <div class="props__desc">
-
+                {{product[device].min_desc}}
             </div>
 
             <div class="props__options devices_type">
                 <div class="options__title">Выберите тип оборудования:</div>
 
-                <div class="radio_group individual">
+                <div class="radio_group">
                     <div class="radio_product">
                         <input type="radio" id="foot_10" v-model="device" value="type_a"/>
                         <label for="foot_10">10 футов</label>
@@ -50,7 +50,7 @@
                 </ul>
             </div>
             <div class="props__btn">
-                <a @click="showIt()" class="btn btn-dark"></a>
+                <a @click="showIt()" class="btn btn-dark ind"></a>
                 <a href="/src/assets/specification.pdf" target="_blank" class="btn btn-link">Спецификация</a>
             </div>
         </div>

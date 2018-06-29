@@ -2221,6 +2221,18 @@ section#five {
     @media screen and (max-width: 560px) {
       .product__props {
         padding: 0; } }
+    .product__props .props__individual {
+      font-family: "DIN Pro regular";
+      font-size: 17px;
+      line-height: 22px;
+      color: #222222;
+      margin-bottom: 25px; }
+      @media screen and (max-width: 1100px) {
+        .product__props .props__individual {
+          text-align: center; } }
+      @media screen and (max-width: 560px) {
+        .product__props .props__individual {
+          padding: 20px 20px; } }
     .product__props .props__desc {
       font-family: "DIN Pro regular";
       font-size: 17px;
@@ -2261,6 +2273,9 @@ section#five {
         .product__props .props__options.devices_type {
           padding: 0px 20px 0 20px; } }
       @media screen and (max-width: 560px) {
+        .product__props .props__options.devices_type {
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 560px) {
         .product__props .props__options.devices_type .radio_group.individual .radio_product:nth-child(1), .product__props .props__options.devices_type .radio_group.individual .radio_product:nth-child(2) {
           -webkit-flex-basis: 50%;
               -ms-flex-preferred-size: 50%;
@@ -2270,7 +2285,7 @@ section#five {
           padding-left: 0;
           padding-right: 0;
           font-size: 15px; }
-        .product__props .props__options.devices_type .radio_group a:nth-child(3) {
+        .product__props .props__options.devices_type .radio_group.individual .radio_product:nth-child(3) label {
           -webkit-flex-basis: 100%;
               -ms-flex-preferred-size: 100%;
                   flex-basis: 100%;
@@ -2411,8 +2426,15 @@ section#five {
       .product__props .props__btn .btn {
         font-size: 17px;
         margin-right: 40px; }
-        .product__props .props__btn .btn:nth-child(1):before {
+        .product__props .props__btn .btn.btn-dark:before {
           content: "Оформить заказ"; }
+        .product__props .props__btn .btn.btn-dark.ind:before {
+          content: "Связаться"; }
+        .product__props .props__btn .btn.btn-link.ind:before {
+          content: "Связаться"; }
+        @media screen and (max-width: 560px) {
+          .product__props .props__btn .btn.btn-link.ind:after {
+            display: none; } }
         @media screen and (max-width: 560px) {
           .product__props .props__btn .btn {
             margin: 0;
