@@ -1,0 +1,249 @@
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img, abbr {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ul li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+legend {
+  color: #000; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*Icon pack*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icon/icomoon.eot?qcjp3f");
+  src: url("../fonts/icon/icomoon.eot?qcjp3f#iefix") format("embedded-opentype"), url("../fonts/icon/icomoon.ttf?qcjp3f") format("truetype"), url("../fonts/icon/icomoon.woff?qcjp3f") format("woff"), url("../fonts/icon/icomoon.svg?qcjp3f#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem; }
+
+/*Gotham Pro*/
+@font-face {
+  font-family: 'Gotham Pro Bold';
+  src: url("../fonts/gotham/GothamPro-Bold.eot");
+  src: local("Gotham Pro Bold"), local("GothamPro-Bold"), url("../fonts/gotham/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro-Bold.woff") format("woff"), url("../fonts/gotham/GothamPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem; }
+
+@font-face {
+  font-family: 'Gotham Pro regular';
+  src: url("../fonts/gotham/GothamPro.eot");
+  src: local("Gotham Pro"), local("GothamPro"), url("../fonts/gotham/GothamPro.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro.woff") format("woff"), url("../fonts/gotham/GothamPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Pro Light';
+  src: url("../fonts/gotham/GothamPro-Light.eot");
+  src: local("Gotham Pro Light"), local("GothamPro-Light"), url("../fonts/gotham/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro-Light.woff") format("woff"), url("../fonts/gotham/GothamPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem; }
+
+.icon-logo:before {
+  content: "\e900"; }
+
+.input {
+  border: none;
+  outline: none;
+  color: #303030; }
+  .input--name {
+    font-family: "Gotham Pro Bold";
+    font-size: 32px; }
+  .input--contacts {
+    font-family: "Gotham Pro regular";
+    font-size: 15px;
+    color: #717171; }
+  .input--desc {
+    font-family: "Gotham Pro Light";
+    font-size: 17px;
+    color: #303030;
+    resize: none; }
+  .input--name::-webkit-input-placeholder {
+    color: #717171; }
+  .input--name::-moz-placeholder {
+    color: #717171; }
+  .input--name:-ms-input-placeholder {
+    color: #717171; }
+  .input--name::-ms-input-placeholder {
+    color: #717171; }
+  .input--name::placeholder {
+    color: #717171; }
+
+.btn {
+  position: relative;
+  -webkit-appearance: none;
+  margin: 0;
+  border: none;
+  overflow: visible;
+  font: inherit;
+  text-transform: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  background: 0;
+  vertical-align: middle;
+  font-family: "Gotham Pro regular";
+  line-height: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer; }
+  .btn:active {
+    outline: none;
+    color: #303030;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn:hover {
+    outline: none; }
+  .btn:disabled, .btn[disabled], .btn.disabled {
+    background: #fff !important;
+    color: #bcbcbc !important;
+    border: 2px solid #bcbcbc !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
+  .btn-outline-dark {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 16px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    border: solid 1px #303030; }
+  .btn-outline-dark:hover {
+    background: #f4f4f4; }
+
+html, body {
+  height: 100vh;
+  overflow: hidden; }
+
+.header {
+  position: relative;
+  max-width: 612px;
+  min-height: 118px;
+  margin: 0 auto;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: logo-loading;
+          animation-name: logo-loading; }
+  .header--full {
+    width: 100%;
+    height: 100vh; }
+  .header__logo {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    width: 130px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -ms-transition: all 0.3s; }
+    .header__logo--full {
+      width: 350px;
+      top: -webkit-calc(50vh - 102px);
+      top: calc(50vh - 102px);
+      left: -webkit-calc(50vh - 350px);
+      left: calc(50vh - 350px); }
+      @media screen and (max-width: 560px) {
+        .header__logo--full {
+          width: 300px;
+          top: -webkit-calc(50vh - 100px);
+          top: calc(50vh - 100px);
+          left: -webkit-calc(50vw - 150px);
+          left: calc(50vw - 150px); } }
+
+@-webkit-keyframes logo-loading {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes logo-loading {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.form {
+  max-width: 612px;
+  margin: 0 auto;
+  padding: 50px 15px 50px 15px; }
+  .form__control {
+    padding: 5px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    overflow: hidden; }
+    .form__control .input--desc {
+      width: 100%;
+      max-width: 100%;
+      min-height: 50vh;
+      max-height: 50vh; }
+      @media screen and (max-width: 560px) {
+        .form__control .input--desc {
+          min-height: 40vh;
+          max-height: 40vh; } }
+  .form .btn {
+    margin-top: 30px; }
+  .form__control:hover, .form__control:hover .input {
+    background: #f1f1f1; }

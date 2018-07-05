@@ -1,0 +1,26 @@
+@import "var";
+
+.input {
+  border: none;
+  outline: none;
+  color: #303030;
+
+  &--name {
+    font-family: $font-gotham-bold;
+    font-size: 32px;
+  }
+  &--contacts {
+    font-family: $font-gotham-regular;
+    font-size: 15px;
+    color: #717171;
+  }
+  &--desc {
+    font-family: $font-gotham-light;
+    font-size: 17px;
+    color: #303030;
+    resize:none;
+}
+  &--name::placeholder {
+    color: #717171;
+  }
+}

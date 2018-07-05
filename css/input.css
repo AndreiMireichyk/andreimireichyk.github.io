@@ -1,0 +1,26 @@
+.input {
+  border: none;
+  outline: none;
+  color: #303030; }
+  .input--name {
+    font-family: "Gotham Pro Bold";
+    font-size: 32px; }
+  .input--contacts {
+    font-family: "Gotham Pro regular";
+    font-size: 15px;
+    color: #717171; }
+  .input--desc {
+    font-family: "Gotham Pro Light";
+    font-size: 17px;
+    color: #303030;
+    resize: none; }
+  .input--name::-webkit-input-placeholder {
+    color: #717171; }
+  .input--name::-moz-placeholder {
+    color: #717171; }
+  .input--name:-ms-input-placeholder {
+    color: #717171; }
+  .input--name::-ms-input-placeholder {
+    color: #717171; }
+  .input--name::placeholder {
+    color: #717171; }

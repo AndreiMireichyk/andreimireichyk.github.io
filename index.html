@@ -2,60 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>PYRAT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/assets/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="./srcassets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="./src/assets/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="./src/assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="./src/assets/favicon/android-chrome-192x192.png" sizes=192x191>
-    <link rel="icon" type="image/png" href="./src/assets/favicon/android-chrome-512x512.png" sizes=512x512>
-    <link rel="manifest" href="./src/assets/favicon/manifest.webmanifest">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes=192x191>
+    <link rel="icon" type="image/png" href="favicon/android-chrome-512x512.png" sizes=512x512>
+    <link rel="manifest" href="favicon/manifest.webmanifest">
     <meta name="msapplication-config" content="./src/assets/favicon/browserconfig.xml"/>
-    <link rel="stylesheet" href="./src/assets/css/main.css">
-
-
-    <!-- Google Tag Manager HEAD -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P5ZF22B');</script>
-    <!-- End Google Tag Manager -->
-
-    <script>
-        var amo_forms_params = {
-            "id": 336001,
-            "hash": "f608cd8a8799a495d0f6301874e719ea",
-            "locale": "ru"
-        };
-    </script>
 </head>
 <body>
 
-<div id="app"></div>
+<header class="header header--full">
+    <img class="header__logo header__logo--full" src="./svg/logo.svg" alt="">
+</header>
 
+<section>
+    <form action="#" class="form">
+        <div class="form__control">
+            <input class="input input--name" type="text" name="name" placeholder="Name">
+        </div>
+        <div class="form__control">
+            <input class="input input--contacts" type="text" name="contacts" placeholder="Contacts">
+        </div>
+        <div class="form__control">
+            <textarea name="description" class="input input--desc" placeholder="Feel free to type anything here…"></textarea>
+        </div>
+        <button class="btn btn-outline-dark">Отправить</button>
+    </form>
+</section>
 
+<script src="libs/jquery/dist/jquery.min.js"></script>
 
-<script src="./src/assets/libs/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('header').click(function () {
+            var header = $(".header");
+            var logo = $(".header__logo");
 
-
-<script src="./dist/build.js"></script>
-<script src="./src/assets/libs/nav/jquery.nav.js"></script>
-<script src="./src/assets/js/menu.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-<!-- Google Tag Manager (noscript) BODY -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5ZF22B"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<script id="mcjs">!function (c, h, i, m, p) {
-    m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
-}(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/83ab43702ccc681787640e463/f6d2f3058d3b54d393207acb2.js");
+            if (header.hasClass("header--full")) {
+                header.removeClass("header--full");
+                logo.removeClass('header__logo--full');
+            } else {
+                header.addClass('header--full');
+                logo.addClass('header__logo--full');
+            }
+        });
+    });
 </script>
-
 </body>
 </html>
