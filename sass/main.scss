@@ -57,7 +57,9 @@ html, body {
     opacity: 1;
   }
 }
-
+section{
+  height: calc(100vh - 158px);
+}
 .form {
   max-width: 612px;
   margin: 0 auto;
@@ -76,9 +78,9 @@ html, body {
     }
 
     .input--desc{
+      box-sizing: border-box;
       margin-top: 10px;
       width: 100%;
-      max-width: 100%;
       min-height: 50vh;
       max-height: 50vh;
       @include xs-block{
@@ -101,4 +103,15 @@ html, body {
   .input:focus::placeholder{
     color: #ffffff;
   }
+}
+
+
+.footer{
+  heihgt: 40px;
+  border-top: solid 1px #f0f0f0;
+  font-family: $font-sf-regular;
+  font-size: 12px;
+  line-height: 40px;
+  text-align: center;
+  color: #b5b5b5;
 }

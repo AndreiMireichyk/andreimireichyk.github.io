@@ -19,6 +19,12 @@ select:-webkit-autofill:focus {
   outline: none;
   color: #303030;
   cursor: pointer; }
+  .input::-moz-selection {
+    background: #303030;
+    color: #ffffff; }
+  .input::selection {
+    background: #303030;
+    color: #ffffff; }
   .input--name {
     font-family: "SF Heavy";
     font-size: 32px; }
