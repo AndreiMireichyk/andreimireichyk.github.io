@@ -31,7 +31,7 @@
         <div class="form__control">
             <textarea name="description" class="input input--desc" placeholder="Feel free to type anything here…" autocomplete="off"></textarea>
         </div>
-        <button class="btn btn-outline-dark">Отправить</button>
+        <a type="submit" class="btn btn-outline-dark">Отправить<div class="rippleJS"></div></a>
     </form>
 </section>
 
@@ -39,6 +39,7 @@
 
 <script>
     $(function () {
+        //Animation logo
         $('header').click(function () {
             var header = $(".header");
             var logo = $(".header__logo");
@@ -56,7 +57,26 @@
                 form.css('transition', 'none');
             }
         });
+
+        //next input enter
+        $("input").keypress(function(event) {
+            var inputName  = $(this).prop('name')
+            if(event.keyCode==13 && !$(this).is(":button")){
+
+                $('input, textarea').each(function(k,v){
+                    if($(v).prop('name') === inputName){
+                        $('input, textarea')[k+1].focus();
+                    }
+
+                });
+                return false;
+            }
+        });
+
     });
+</script>
+<script type="module">
+    import 'https://cdn.rawgit.com/samthor/rippleJS/v1.0.2/ripple.min.js';
 </script>
 </body>
 </html>

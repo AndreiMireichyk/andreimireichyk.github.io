@@ -12,7 +12,7 @@
   padding: 0;
   background: 0;
   vertical-align: middle;
-  font-family: "Gotham Pro regular";
+  font-family: "SF SemiBold";
   line-height: 1rem;
   font-size: 1rem;
   text-align: center;
@@ -41,7 +41,7 @@
   .btn-outline-dark {
     font-size: 14px;
     text-transform: uppercase;
-    padding: 13px 16px;
+    padding: 9px 16px;
     -webkit-border-radius: 3px;
             border-radius: 3px;
     border: solid 1px #303030; }

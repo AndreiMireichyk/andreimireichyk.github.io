@@ -90,6 +90,13 @@ img {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'SF SemiBold';
+  src: url("../fonts/sanfrancisco/SFUIText-Semibold.eot");
+  src: local("SF UI Text Semibold"), local("SFUIText-Semibold"), url("../fonts/sanfrancisco/SFUIText-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Semibold.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -167,7 +174,7 @@ select:-webkit-autofill:focus {
   padding: 0;
   background: 0;
   vertical-align: middle;
-  font-family: "Gotham Pro regular";
+  font-family: "SF SemiBold";
   line-height: 1rem;
   font-size: 1rem;
   text-align: center;
@@ -196,7 +203,7 @@ select:-webkit-autofill:focus {
   .btn-outline-dark {
     font-size: 14px;
     text-transform: uppercase;
-    padding: 13px 16px;
+    padding: 9px 16px;
     -webkit-border-radius: 3px;
             border-radius: 3px;
     border: solid 1px #303030; }
@@ -271,6 +278,7 @@ html, body {
       -webkit-border-radius: 3px;
               border-radius: 3px; }
     .form__control .input--desc {
+      margin-top: 10px;
       width: 100%;
       max-width: 100%;
       min-height: 50vh;

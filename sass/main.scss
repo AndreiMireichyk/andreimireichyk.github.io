@@ -65,9 +65,8 @@ html, body {
   transition: opacity 1s ease 0.3s;
   opacity: 0;
 
+
   &__control {
-
-
     overflow: hidden;
 
     .input{
@@ -77,6 +76,7 @@ html, body {
     }
 
     .input--desc{
+      margin-top: 10px;
       width: 100%;
       max-width: 100%;
       min-height: 50vh;

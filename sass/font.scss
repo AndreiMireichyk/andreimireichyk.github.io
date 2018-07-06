@@ -68,3 +68,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'SF SemiBold';
+  src: url('../fonts/sanfrancisco/SFUIText-Semibold.eot');
+  src: local('SF UI Text Semibold'), local('SFUIText-Semibold'),
+  url('../fonts/sanfrancisco/SFUIText-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/sanfrancisco/SFUIText-Semibold.woff') format('woff'),
+  url('../fonts/sanfrancisco/SFUIText-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
