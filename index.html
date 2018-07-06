@@ -20,18 +20,21 @@
     <img class="header__logo header__logo--full" src="./svg/logo.svg" alt="">
 </header>
 
-<section>
+<section class="hidden">
     <form action="#" class="form">
         <div class="form__control">
             <input class="input input--name" type="text" name="name" placeholder="Name Yourself" autocomplete="off">
         </div>
         <div class="form__control">
-            <input class="input input--contacts" type="text" name="contacts" placeholder="Contacts"  autocomplete="off">
+            <input class="input input--contacts" type="text" name="contacts" placeholder="Contacts" autocomplete="off">
         </div>
         <div class="form__control">
-            <textarea name="description" class="input input--desc" placeholder="Feel free to type anything here…" autocomplete="off"></textarea>
+            <textarea name="description" class="input input--desc" placeholder="Feel free to type anything here…"
+                      autocomplete="off"></textarea>
         </div>
-        <a class="btn btn-outline-dark">Send<div class="rippleJS"></div></a>
+        <a class="btn btn-outline-dark">Send
+            <div class="rippleJS"></div>
+        </a>
     </form>
 </section>
 <footer class="footer">
@@ -47,28 +50,29 @@
             var header = $(".header");
             var logo = $(".header__logo");
             var form = $(".form");
+            var section = $('section');
 
             if (header.hasClass("header--full")) {
+                section.removeClass('hidden');
                 header.removeClass("header--full");
                 logo.removeClass('header__logo--full');
-                form.css('opacity', 1);
-                form.css('transition', 'opacity 1s ease 0.3s');
+                form.css('transition', 'opacity 1s ease 0.3s').css('opacity', 1);
             } else {
+                section.addClass('hidden');
                 header.addClass('header--full');
                 logo.addClass('header__logo--full');
-                form.css('opacity', 0);
-                form.css('transition', 'none');
+                form.css('transition', 'none').css('opacity', 0);
             }
         });
 
         //next input enter
-        $("input").keypress(function(event) {
-            var inputName  = $(this).prop('name')
-            if(event.keyCode==13 && !$(this).is(":button")){
+        $("input").keypress(function (event) {
+            var inputName = $(this).prop('name')
+            if (event.keyCode == 13 && !$(this).is(":button")) {
 
-                $('input, textarea').each(function(k,v){
-                    if($(v).prop('name') === inputName){
-                        $('input, textarea')[k+1].focus();
+                $('input, textarea').each(function (k, v) {
+                    if ($(v).prop('name') === inputName) {
+                        $('input, textarea')[k + 1].focus();
                     }
 
                 });
