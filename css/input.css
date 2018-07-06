@@ -17,7 +17,8 @@ select:-webkit-autofill:focus {
 .input {
   border: none;
   outline: none;
-  color: #303030; }
+  color: #303030;
+  cursor: pointer; }
   .input--name {
     font-family: "SF Heavy";
     font-size: 32px; }
