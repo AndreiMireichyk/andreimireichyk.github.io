@@ -76,6 +76,20 @@ img {
   font-weight: 300;
   font-style: normal; }
 
+@font-face {
+  font-family: 'SF Heavy';
+  src: url("../fonts/sanfrancisco/SFUIText-Heavy.eot");
+  src: local("SF UI Text Heavy"), local("SFUIText-Heavy"), url("../fonts/sanfrancisco/SFUIText-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Heavy.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SF Regular';
+  src: url("../fonts/sanfrancisco/SFUIText-Regular.eot");
+  src: local("SF UI Text Regular"), local("SFUIText-Regular"), url("../fonts/sanfrancisco/SFUIText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Regular.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -96,32 +110,47 @@ img {
 .icon-logo:before {
   content: "\e900"; }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #303030;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  -o-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: #fff; }
+
 .input {
   border: none;
   outline: none;
   color: #303030; }
   .input--name {
-    font-family: "Gotham Pro Bold";
+    font-family: "SF Heavy";
     font-size: 32px; }
   .input--contacts {
-    font-family: "Gotham Pro regular";
+    font-family: "SF Regular";
     font-size: 15px;
     color: #717171; }
   .input--desc {
-    font-family: "Gotham Pro Light";
+    font-family: "SF Regular";
     font-size: 17px;
-    color: #303030;
     resize: none; }
   .input--name::-webkit-input-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name::-moz-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name:-ms-input-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name::-ms-input-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name::placeholder {
-    color: #717171; }
+    color: #656565; }
 
 .btn {
   position: relative;
@@ -182,8 +211,8 @@ html, body {
   max-width: 612px;
   min-height: 118px;
   margin: 0 auto;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-name: logo-loading;
           animation-name: logo-loading; }
   .header--full {
@@ -200,18 +229,18 @@ html, body {
     transition: all 0.3s;
     -ms-transition: all 0.3s; }
     .header__logo--full {
-      width: 350px;
-      top: -webkit-calc(50vh - 102px);
-      top: calc(50vh - 102px);
-      left: -webkit-calc(50vh - 350px);
-      left: calc(50vh - 350px); }
-      @media screen and (max-width: 560px) {
+      width: 600px;
+      top: -webkit-calc(50vh - 150px);
+      top: calc(50vh - 150px);
+      left: -webkit-calc(50vh - 480px);
+      left: calc(50vh - 480px); }
+      @media screen and (max-width: 780px) {
         .header__logo--full {
-          width: 300px;
+          width: 90%;
           top: -webkit-calc(50vh - 100px);
           top: calc(50vh - 100px);
-          left: -webkit-calc(50vw - 150px);
-          left: calc(50vw - 150px); } }
+          left: -webkit-calc(50vw - 45%);
+          left: calc(50vw - 45%); } }
 
 @-webkit-keyframes logo-loading {
   from {
@@ -228,12 +257,18 @@ html, body {
 .form {
   max-width: 612px;
   margin: 0 auto;
-  padding: 50px 15px 50px 15px; }
+  padding: 50px 15px 50px 15px;
+  -webkit-transition: opacity 1s ease 0.3s;
+  -o-transition: opacity 1s ease 0.3s;
+  transition: opacity 1s ease 0.3s;
+  opacity: 0; }
   .form__control {
-    padding: 5px;
-    -webkit-border-radius: 3px;
-            border-radius: 3px;
     overflow: hidden; }
+    .form__control .input {
+      width: 100%;
+      padding: 5px;
+      -webkit-border-radius: 3px;
+              border-radius: 3px; }
     .form__control .input--desc {
       width: 100%;
       max-width: 100%;
@@ -245,5 +280,17 @@ html, body {
           max-height: 40vh; } }
   .form .btn {
     margin-top: 30px; }
-  .form__control:hover, .form__control:hover .input {
+  .form .input:hover {
     background: #f1f1f1; }
+  .form .input:focus {
+    background: #ffffff !important; }
+  .form .input:focus::-webkit-input-placeholder {
+    color: #ffffff; }
+  .form .input:focus::-moz-placeholder {
+    color: #ffffff; }
+  .form .input:focus:-ms-input-placeholder {
+    color: #ffffff; }
+  .form .input:focus::-ms-input-placeholder {
+    color: #ffffff; }
+  .form .input:focus::placeholder {
+    color: #ffffff; }

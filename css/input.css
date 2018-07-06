@@ -1,26 +1,41 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #303030;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  -o-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: #fff; }
+
 .input {
   border: none;
   outline: none;
   color: #303030; }
   .input--name {
-    font-family: "Gotham Pro Bold";
+    font-family: "SF Heavy";
     font-size: 32px; }
   .input--contacts {
-    font-family: "Gotham Pro regular";
+    font-family: "SF Regular";
     font-size: 15px;
     color: #717171; }
   .input--desc {
-    font-family: "Gotham Pro Light";
+    font-family: "SF Regular";
     font-size: 17px;
-    color: #303030;
     resize: none; }
   .input--name::-webkit-input-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name::-moz-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name:-ms-input-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name::-ms-input-placeholder {
-    color: #717171; }
+    color: #656565; }
   .input--name::placeholder {
-    color: #717171; }
+    color: #656565; }

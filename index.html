@@ -23,7 +23,7 @@
 <section>
     <form action="#" class="form">
         <div class="form__control">
-            <input class="input input--name" type="text" name="name" placeholder="Name">
+            <input class="input input--name" type="text" name="name" placeholder="Name Yourself">
         </div>
         <div class="form__control">
             <input class="input input--contacts" type="text" name="contacts" placeholder="Contacts">
@@ -42,13 +42,18 @@
         $('header').click(function () {
             var header = $(".header");
             var logo = $(".header__logo");
+            var form = $(".form");
 
             if (header.hasClass("header--full")) {
                 header.removeClass("header--full");
                 logo.removeClass('header__logo--full');
+                form.css('opacity', 1);
+                form.css('transition', 'opacity 1s ease 0.3s');
             } else {
                 header.addClass('header--full');
                 logo.addClass('header__logo--full');
+                form.css('opacity', 0);
+                form.css('transition', 'none');
             }
         });
     });

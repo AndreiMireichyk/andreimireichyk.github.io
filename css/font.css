@@ -29,3 +29,17 @@
   src: local("Gotham Pro Light"), local("GothamPro-Light"), url("../fonts/gotham/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamPro-Light.woff") format("woff"), url("../fonts/gotham/GothamPro-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
+
+@font-face {
+  font-family: 'SF Heavy';
+  src: url("../fonts/sanfrancisco/SFUIText-Heavy.eot");
+  src: local("SF UI Text Heavy"), local("SFUIText-Heavy"), url("../fonts/sanfrancisco/SFUIText-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Heavy.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SF Regular';
+  src: url("../fonts/sanfrancisco/SFUIText-Regular.eot");
+  src: local("SF UI Text Regular"), local("SFUIText-Regular"), url("../fonts/sanfrancisco/SFUIText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Regular.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }

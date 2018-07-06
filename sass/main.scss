@@ -19,7 +19,7 @@ html, body {
   max-width: 612px;
   min-height: 118px;
   margin: 0 auto;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: logo-loading;
 
   &--full {
@@ -37,14 +37,14 @@ html, body {
     -ms-transition: all 0.3s;
 
     &--full {
-      @include xs-block{
-        width: 300px;
+      @include sm-block{
+        width: 90%;
         top: calc(50vh - 100px);
-        left: calc(50vw - 150px);
+        left: calc(50vw - 45%);
       };
-      width: 350px;
-      top: calc(50vh - 102px);
-      left: calc(50vh - 350px);
+      width: 600px;
+      top: calc(50vh - 150px);
+      left: calc(50vh - 480px);
     }
   }
 }
@@ -62,11 +62,19 @@ html, body {
   max-width: 612px;
   margin: 0 auto;
   padding: 50px 15px 50px 15px;
+  transition: opacity 1s ease 0.3s;
+  opacity: 0;
 
   &__control {
-    padding: 5px;
-    border-radius: 3px;
+
+
     overflow: hidden;
+
+    .input{
+      width: 100%;
+      padding: 5px;
+      border-radius: 3px;
+    }
 
     .input--desc{
       width: 100%;
@@ -84,7 +92,13 @@ html, body {
     margin-top: 30px;
   }
 
-  &__control:hover, &__control:hover .input {
+  .input:hover{
     background: #f1f1f1;
+  }
+  .input:focus{
+    background: #ffffff !important;
+  }
+  .input:focus::placeholder{
+    color: #ffffff;
   }
 }
