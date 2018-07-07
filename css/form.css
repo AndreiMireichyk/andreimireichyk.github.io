@@ -1,0 +1,36 @@
+section.contacts {
+  height: -webkit-calc(100vh - 158px);
+  height: calc(100vh - 158px); }
+
+section.contacts.hidden {
+  height: 0;
+  overflow: hidden; }
+
+.form {
+  max-width: 612px;
+  margin: 0 auto;
+  padding: 50px 15px 50px 15px;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .form__control {
+    position: relative;
+    overflow: hidden; }
+    .form__control .input {
+      width: 100%;
+      padding: 5px;
+      -webkit-border-radius: 3px;
+              border-radius: 3px; }
+    .form__control .input--desc {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      margin-top: 10px;
+      width: 100%;
+      min-height: 50vh;
+      max-height: 50vh; }
+      @media screen and (max-width: 560px) {
+        .form__control .input--desc {
+          min-height: 40vh;
+          max-height: 40vh; } }
+  .form .btn {
+    margin-top: 30px; }

@@ -46,3 +46,17 @@ select:-webkit-autofill:focus {
     color: #656565; }
   .input--name::placeholder {
     color: #656565; }
+  .input:hover {
+    background: #f1f1f1; }
+  .input:focus {
+    background: #ffffff !important; }
+  .input:focus::-webkit-input-placeholder {
+    color: #ffffff; }
+  .input:focus::-moz-placeholder {
+    color: #ffffff; }
+  .input:focus:-ms-input-placeholder {
+    color: #ffffff; }
+  .input:focus::-ms-input-placeholder {
+    color: #ffffff; }
+  .input:focus::placeholder {
+    color: #ffffff; }

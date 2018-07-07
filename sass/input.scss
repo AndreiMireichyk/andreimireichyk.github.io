@@ -41,4 +41,13 @@ select:-webkit-autofill:focus {
   &--name::placeholder {
     color: #656565;
   }
+  &:hover {
+    background: #f1f1f1;
+  }
+  &:focus {
+    background: #ffffff !important;
+  }
+  &:focus::placeholder {
+    color: #ffffff;
+  }
 }

@@ -50,3 +50,10 @@
   src: local("SF UI Text Semibold"), local("SFUIText-Semibold"), url("../fonts/sanfrancisco/SFUIText-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Semibold.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
+
+@font-face {
+  font-family: 'SF Light';
+  src: url("../fonts/sanfrancisco/SFUIText-Light.eot");
+  src: local("SF UI Text Light"), local("SFUIText-Light"), url("../fonts/sanfrancisco/SFUIText-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/sanfrancisco/SFUIText-Light.woff") format("woff"), url("../fonts/sanfrancisco/SFUIText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }

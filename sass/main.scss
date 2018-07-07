@@ -7,6 +7,12 @@
 @import "icon";
 @import "input";
 @import "btn";
+@import "icon_accepted";
+
+@import "header";
+@import "footer";
+@import "form";
+@import "accept";
 
 html, body {
 
@@ -14,109 +20,6 @@ html, body {
   overflow: hidden;
 }
 
-.header {
-  position: relative;
-  max-width: 612px;
-  min-height: 118px;
-  margin: 0 auto;
-  animation-duration: 2s;
-  animation-name: logo-loading;
-
-  &--full {
-    width: 100%;
-    height: calc(100vh - 40px);
-  }
-
-  &__logo {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    width: 130px;
-    cursor: pointer;
-    transition: all 0.3s;
-    &--full {
-      @include sm-block{
-        width: 90%;
-        top: calc(50vh - 100px);
-        left: calc(50vw - 45%);
-      };
-      width: 600px;
-      top: calc(50vh - 150px);
-      left: calc(50vh - 480px);
-    }
-  }
-}
-
-@keyframes logo-loading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-section{
-  height: calc(100vh - 158px);
-}
-.hidden{
-  height: 0;
-  overflow: hidden;
-}
-.form {
-  max-width: 612px;
-  margin: 0 auto;
-  padding: 50px 15px 50px 15px;
-  opacity: 0;
-  box-sizing: border-box;
 
 
-  &__control {
-    overflow: hidden;
 
-    .input{
-      width: 100%;
-      padding: 5px;
-      border-radius: 3px;
-    }
-
-    .input--desc{
-      box-sizing: border-box;
-      margin-top: 10px;
-      width: 100%;
-      min-height: 50vh;
-      max-height: 50vh;
-      @include xs-block{
-        min-height: 40vh;
-        max-height: 40vh;
-      }
-    }
-  }
-
-  .btn{
-    margin-top: 30px;
-  }
-
-  .input:hover{
-    background: #f1f1f1;
-  }
-  .input.input--desc:hover{
-    background: linear-gradient(top, #f1f1f1 28px, #ffffff 0, #ffffff 0);
-  }
-  .input:focus{
-    background: #ffffff !important;
-  }
-  .input:focus::placeholder{
-    color: #ffffff;
-  }
-}
-
-
-.footer{
-  height: 40px;
-  border-top: solid 1px #f0f0f0;
-  font-family: $font-sf-regular;
-  font-size: 12px;
-  line-height: 40px;
-  text-align: center;
-  color: #b5b5b5;
-}
