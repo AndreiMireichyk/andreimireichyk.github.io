@@ -1,0 +1,10 @@
+.router-enter-active, .router-leave-active {
+  -webkit-transition: opacity 1s ease 0.3s;
+  -o-transition: opacity 1s ease 0.3s;
+  transition: opacity 1s ease 0.3s; }
+
+.router-enter, .router-leave-to {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0; }

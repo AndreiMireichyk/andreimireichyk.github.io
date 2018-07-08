@@ -1,4 +1,7 @@
 .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   height: 40px;
   border-top: solid 1px #f0f0f0;
   font-family: "SF Regular";

@@ -1,72 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>PYRAT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes=192x191>
-    <link rel="icon" type="image/png" href="favicon/android-chrome-512x512.png" sizes=512x512>
-    <link rel="manifest" href="favicon/manifest.webmanifest">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/favicon/android-chrome-192x192.png" sizes=192x191>
+    <link rel="icon" type="image/png" href="/assets/favicon/android-chrome-512x512.png" sizes=512x512>
+    <link rel="manifest" href="/assets/favicon/manifest.webmanifest">
     <meta name="msapplication-config" content="./src/assets/favicon/browserconfig.xml"/>
 </head>
 <body>
 
-<header class="header header--full">
-    <img class="header__logo header__logo--full" src="./svg/logo.svg" alt="">
-</header>
+<div id="app"></div>
 
-<section class="contacts hidden">
-    <form action="#" class="form">
-        <div class="form__control">
-            <input class="input input--name" type="text" name="name" placeholder="Name Yourself" autocomplete="off">
-        </div>
-        <div class="form__control">
-            <input class="input input--contacts" type="text" name="contacts" placeholder="Contacts" autocomplete="off">
-        </div>
-        <div class="form__control">
-            <textarea name="description" class="input input--desc" placeholder="Feel free to type anything here…"
-                      autocomplete="off"></textarea>
 
-        </div>
-        <a class="btn btn-outline-dark" data-send>Send
-            <div class="rippleJS"></div>
-        </a>
-    </form>
-</section>
 
-<section class="accept hidden">
-    <div class="accept__icon">
-        <div class="check_mark">
-            <div class="sa-icon sa-success animate">
-                <span class="sa-line sa-tip animateSuccessTip"></span>
-                <span class="sa-line sa-long animateSuccessLong"></span>
-                <div class="sa-placeholder"></div>
-                <div class="sa-fix"></div>
-            </div>
-        </div>
-    </div>
-    <div class="accept__title">
-        Message accepted
-    </div>
-    <div class="accept__tagline">
-        Coming soon with you
-    </div>
-
-</section>
-<footer class="footer">
-    Do You Think Motivational Thoughts
-</footer>
-
-<script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/dynamic/dynamics.js"></script>
-<script src="js/logo_animation.js"></script>
-<script src="js/icon_animation.js"></script>
-<script src="js/form.js"></script>
+<script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="/dist/build.js"></script>
+<!--<script src="/assets/js/logo_animation.js"></script>
+<script src="/assets/js/icon_animation.js"></script>
+<script src="/assets/js/form.js"></script>-->
 
 <script type="module">
     import 'https://cdn.rawgit.com/samthor/rippleJS/v1.0.2/ripple.min.js';

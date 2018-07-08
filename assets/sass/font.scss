@@ -89,3 +89,13 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SF Medium';
+  src: url('../fonts/sanfrancisco/SFUIText-Medium.eot');
+  src: local('SF UI Text Medium'), local('SFUIText-Medium'),
+  url('../fonts/sanfrancisco/SFUIText-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/sanfrancisco/SFUIText-Medium.woff') format('woff'),
+  url('../fonts/sanfrancisco/SFUIText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
