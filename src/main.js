@@ -13,7 +13,7 @@ const routes = [
     { path: '/contacts', component : Contacts, name: 'contacts'},
     { path: '/accept', component : Accept, name: 'accept'}
 ];
-const router = new VueRouter({routes, mode: "history"});
+const router = new VueRouter({routes});
 
 new Vue({
     el: '#app',
