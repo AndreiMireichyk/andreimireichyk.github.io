@@ -27,6 +27,7 @@ section.contacts {
   }
 
   &__error {
+    @include md(display, none);
     position: absolute;
     right: calc(100% + 15px);
     font-family: $font-sf-light;
@@ -47,6 +48,7 @@ section.contacts {
     @include row-flex();
     align-items: center;
     position: relative;
+    margin: 0;
 
     .input {
       z-index: 2;

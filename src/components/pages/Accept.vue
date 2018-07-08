@@ -1,6 +1,7 @@
 <template>
     <div>
-        <section class="accept">
+        <section class="accept"
+        @click="$router.push('/home')">
             <div class="accept__icon">
                 <div class="check_mark">
                     <div class="sa-icon sa-success animate">
@@ -25,8 +26,17 @@
 <script>
     export default {
         name: "accept",
-        mounted(){
+        data(){return{
+            timer : {}
+        }},
+        methods:{
 
+        },
+        mounted(){
+           this.timer = setTimeout(()=>{this.$router.push("/home")}, 10000);
+        },
+        destroyed(){
+            clearTimeout(this.timer);
         }
     }
 </script>

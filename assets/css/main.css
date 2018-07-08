@@ -539,7 +539,8 @@ select:-webkit-autofill:focus {
   font-size: 12px;
   line-height: 40px;
   text-align: center;
-  color: #b5b5b5; }
+  color: #b5b5b5;
+  background: #fff; }
 
 section.contacts {
   height: -webkit-calc(100vh - 158px);
@@ -588,6 +589,9 @@ section.contacts {
     max-width: 140px;
     width: 0;
     text-align: center; }
+    @media screen and (max-width: 960px) {
+      .form__error {
+        display: none; } }
   .form__control {
     display: -webkit-box;
     display: -webkit-flex;
@@ -602,7 +606,8 @@ section.contacts {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative; }
+    position: relative;
+    margin: 0; }
     .form__control .input {
       z-index: 2;
       width: 100%;
@@ -675,7 +680,10 @@ section.accept.hidden {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-align: center;
+  margin: 0;
+  cursor: pointer; }
   .accept__icon {
     margin-bottom: 32px;
     -webkit-animation-name: accept;
@@ -691,6 +699,9 @@ section.accept.hidden {
             animation-name: accept;
     -webkit-animation-duration: 1.1s;
             animation-duration: 1.1s; }
+    @media screen and (max-width: 560px) {
+      .accept__title {
+        font-size: 32px; } }
   .accept__tagline {
     font-family: "SF Regular";
     font-size: 15px;
