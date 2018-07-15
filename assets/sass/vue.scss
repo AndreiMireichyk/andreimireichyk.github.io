@@ -1,8 +1,0 @@
-
-.router-enter-active, .router-leave-active {
-  transition: opacity 1s ease 0.3s;
-}
-.router-enter, .router-leave-to /* .fade-leave-active до версии 2.1.8 */ {
-  transition: none;
-  opacity: 0;
-}
