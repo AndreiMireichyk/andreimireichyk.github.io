@@ -3,39 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Деньги в долг</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="shortcut icon" href="/app/favicon/favicon.ico" type="image/x-icon"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/app/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/app/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/app/favicon/android-chrome-192x192.png" sizes=192x191>
-    <link rel="icon" type="image/png" href="/app/favicon/android-chrome-512x512.png" sizes=512x512>
-    <link rel="manifest" href="/app/favicon/manifest.webmanifest">
-    <meta name="msapplication-config" content="./src/assets/favicon/browserconfig.xml"/>
+    <link rel="stylesheet" href="./css/bootstrap.css?123">
+    <link rel="stylesheet" href="./css/main.css?123">
 </head>
 <body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>Заполните форму</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="text" class="form-control" id="phone" placeholder="+375 (29) 344 55 44">
+                    </div>
+                    <div class="form-group">
+                        <label for="count">Необходимая сумма</label>
+                        <input type="number" class="form-control" id="count" placeholder="100">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="btn btn-outline-yellow">Отправить</a>
+            </div>
+        </div>
+    </div>
+</div>
 <!--header-->
 <header class="header">
     <div class="header__wrap">
+
         <nav class="header__nav nav_bar">
             <div class="nav_bar__item">
-                <a href="#" class="nav_bar__link">Как получить деньги</a>
+                <a href="#one" class="nav_bar__link">Главная</a>
             </div>
             <div class="nav_bar__item">
-                <a href="#" class="nav_bar__link">Почему мы?</a>
+                <a href="#two" class="nav_bar__link">Как получить деньги</a>
             </div>
             <div class="nav_bar__item">
-                <a href="#" class="nav_bar__link">Условия</a>
+                <a href="#three" class="nav_bar__link">Почему мы?</a>
             </div>
             <div class="nav_bar__item">
-                <a href="#" class="nav_bar__link">Контакты</a>
+                <a href="#four" class="nav_bar__link">Условия</a>
+            </div>
+            <div class="nav_bar__item">
+                <a href="#five" class="nav_bar__link">Контакты</a>
             </div>
         </nav>
+        <div class="nav_bar__toggler"><i class="icon icon-menu2"></i></div>
         <div class="header__contacts">
             <div class="header__phone">
-                <i class="icon icon-phone-square"> </i><a href="tel:375 29333-44-45" class="btn btn-phone-header"><span
-                    class="phone_prefix">+375 29</span> 333-44-45</a>
+                <i class="icon icon-phone-square"> </i><a href="tel:375 29333-44-45" class="btn btn-phone-header">
+                +375 29 <span class="phone_prefix">333-44-45</span></a>
             </div>
             <div class="header__time">
                 <i class="icon icon-time"> </i><span class="time"> Пн. - Вс. 9:00 - 21:00</span>
@@ -47,9 +79,13 @@
 
 <!--content-->
 <main class="main">
-    <section class="home">
+    <section class="home" id="one">
         <div class="home__wrap">
             <div class="home__info">
+                <div class="home__contacts">
+                    <a href="tel:375293334445" class="home__contacts">+375 29 333-44-45</a>
+                </div>
+                <div class="home__contdesc"> Работаем по всей РБ!</div>
                 <h1 class="home__title">Деньги в долг</h1>
                 <div class="home__subtitle">от 100 до 3 000 BYN</div>
                 <div class="home__desc">
@@ -57,43 +93,35 @@
                         <div class="icongroup__item">
                             <div class="icongroup__title"><i class="icon icon-checkmark"></i>Необходим только паспорт
                             </div>
-                            <div class="icongroup__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Consequatur error fuga, incidunt ipsum odio possimus quas quis reiciendis sint
-                                voluptate!
+                            <div class="icongroup__desc">
                             </div>
                         </div>
                         <div class="icongroup__item">
                             <div class="icongroup__title"><i class="icon icon-checkmark"></i>Работаем по всей РБ</div>
-                            <div class="icongroup__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                debitis distinctio doloremque excepturi facere nobis, odit repellat repellendus
-                                temporibus voluptatum.
+                            <div class="icongroup__desc">
                             </div>
                         </div>
                         <div class="icongroup__item">
                             <div class="icongroup__title"><i class="icon icon-checkmark"></i>Официально безработным
                             </div>
-                            <div class="icongroup__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Cumque fugiat ipsum, molestias porro quas quibusdam recusandae repellendus saepe unde
-                                ut?
+                            <div class="icongroup__desc">
                             </div>
                         </div>
                         <div class="icongroup__item">
                             <div class="icongroup__title"><i class="icon icon-checkmark"></i>Деньги в день обращения
                             </div>
-                            <div class="icongroup__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Asperiores assumenda atque cumque, dolorem, doloribus et eveniet iure non numquam quam
-                                saepe suscipit tempora veritatis voluptate.
+                            <div class="icongroup__desc">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="home__action">
-                    <a href="#" class="btn btn-outline-yellow">Заказать звонок</a>
+                    <a href="#" class="btn btn-outline-yellow" data-toggle="modal" data-target="#exampleModal">Заказать звонок</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="how">
+    <section class="how" id="two">
         <h2 class="how__title">
             Как получить деньги ?
         </h2>
@@ -101,32 +129,26 @@
             <div class="sprint__item">
                 <div class="sprint__icon sprint__icon-1"></div>
                 <div class="sprint__title">Оформите заявку</div>
-                <div class="sprint__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    deleniti, esse quam quos ut voluptates!
-                    таких та городах
+                <div class="sprint__description">
                 </div>
             </div>
             <div class="sprint__item">
                 <div class="sprint__icon sprint__icon-2"></div>
                 <div class="sprint__title">Мы произведем расчет</div>
-                <div class="sprint__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    deleniti, esse quam quos ut voluptates!
-                    таких та городах
+                <div class="sprint__description">
                 </div>
             </div>
             <div class="sprint__item">
                 <div class="sprint__icon sprint__icon-3"></div>
                 <div class="sprint__title">Вы получите деньги</div>
-                <div class="sprint__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    deleniti, esse quam quos ut voluptates!
-                    таких та городах
+                <div class="sprint__description">
                 </div>
             </div>
         </div>
 
 
     </section>
-    <section class="policy">
+    <section class="policy" id="three">
         <div class="policy__wrap">
             <div class="policy__info">
                 <div class="policy__title">
@@ -197,7 +219,7 @@
             </div>
         </div>
     </section>
-    <section class="conditions">
+    <section class="conditions" id="four">
         <h3 class="conditions__title">Условия получения быстрых денег</h3>
         <div class="conditions__items">
             <div class="conditions__item">Срок займа от 6 до 24 месяцев.</div>
@@ -226,30 +248,29 @@
         </div>
 
         <div class="conditions__action">
-            <a href="#" class="btn btn-outline-yellow">Оформить заказ</a>
+            <a href="#" class="btn btn-outline-yellow" data-toggle="modal" data-target="#exampleModal">Оформить заказ</a>
         </div>
         <p class="conditions__tagline">Cрочный заем денег - это просто!<br> оставляйте заявку на оформление займа прямо
             сейчас и деньги будут у вас уже сегодня!</p>
     </section>
-
-    <section class="contacts">
+    <section class="contacts" id="five">
         <h3 class="contacts__title">Контакты</h3>
         <div class="contacts__list">
             <div class="contacts__item">
                 <div class="contacts__phone"><i class="icon icon-phone-square"></i>+375 29 444 33 45</div>
-                <div class="contacts__adress"><i class="icon icon-map-pin-alt"></i>Республика Беларусь, г. Минск</div>
+                <div class="contacts__adress"><i class="icon icon-compas1"></i>Республика Беларусь, г. Минск</div>
             </div>
             <div class="contacts__item">
                 <div class="contacts__phone"><i class="icon icon-phone-square"></i>+375 29 444 33 45</div>
-                <div class="contacts__adress"><i class="icon icon-map-pin-alt"></i>Республика Беларусь, г. Бобруйск</div>
+                <div class="contacts__adress"><i class="icon icon-compas1"></i>Республика Беларусь, г. Бобруйск</div>
             </div>
             <div class="contacts__item">
                 <div class="contacts__phone"><i class="icon icon-phone-square"></i>+375 29 444 33 45</div>
-                <div class="contacts__adress"><i class="icon icon-map-pin-alt"></i>Республика Беларусь, г. Витебск</div>
+                <div class="contacts__adress"><i class="icon icon-compas1"></i>Республика Беларусь, г. Витебск</div>
             </div>
             <div class="contacts__item">
                 <div class="contacts__phone"><i class="icon icon-phone-square"></i>+375 29 444 33 45</div>
-                <div class="contacts__adress"><i class="icon icon-map-pin-alt"></i>Республика Беларусь, г. Мозырь</div>
+                <div class="contacts__adress"><i class="icon icon-compas1"></i>Республика Беларусь, г. Мозырь</div>
             </div>
         </div>
     </section>
@@ -258,26 +279,14 @@
 
 <!--footer-->
 <footer class="footer">
-    sitename.by 2018
+    sitename.by 2018 ©
 </footer>
 <!--end footer-->
 
 <script src="./libs/jquery/dist/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/jquery.nav.js"></script>
+<script src="./js/menu.js"></script>
 
-<script>
-    $(function () {
-        $(document).scroll(function () {
-
-            if ($(this).scrollTop() < 1) {
-                $('.header').removeClass('header--slice');
-            } else {
-                $('.header').addClass('header--slice');
-            }
-
-        });
-    });
-
-
-</script>
 </body>
 </html>
