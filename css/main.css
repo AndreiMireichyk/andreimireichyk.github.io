@@ -392,29 +392,33 @@ select:-webkit-autofill:focus {
 .nav_bar.open + .nav_bar__toggler .icon:before {
   content: "\e910"; }
 
-.icongroup__item {
-  padding: 10px 0; }
-
-.icongroup__title {
-  font-family: "Proxima Semibold";
-  font-size: 26px; }
-  @media screen and (max-width: 560px) {
-    .icongroup__title {
-      font-size: 18px; } }
-  .icongroup__title .icon {
-    position: relative;
-    top: -3px;
-    font-size: 26px;
-    color: #7d3aa1;
-    padding-right: 10px; }
-
-.icongroup__desc {
-  font-family: "Proxima Regular";
-  text-align: center;
-  font-size: 1.5rem;
-  color: #fff;
-  max-width: 720px;
-  margin: 0 auto; }
+.icongroup {
+  margin-bottom: 50px; }
+  .icongroup__item {
+    padding: 10px 0; }
+  .icongroup__title {
+    font-family: "Proxima Semibold";
+    font-size: 26px; }
+    @media screen and (max-width: 560px) {
+      .icongroup__title {
+        font-size: 18px; } }
+    .icongroup__title .icon {
+      position: relative;
+      top: -3px;
+      font-size: 26px;
+      color: #7d3aa1;
+      padding-right: 10px; }
+  .icongroup__desc--small {
+    font-size: 1.2rem !important; }
+  .icongroup__desc {
+    font-family: "Proxima Regular";
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    max-width: 720px;
+    margin: 0 auto; }
+    .icongroup__desc .green {
+      color: #9ed02f; }
 
 .sprint {
   display: -webkit-box;
@@ -824,8 +828,6 @@ select:-webkit-autofill:focus {
     -webkit-box-sizing: padding-box;
             box-sizing: padding-box;
     padding-top: 65px; }
-  .home__info {
-    padding: 40px 0px; }
   .home__contdesc {
     text-align: center;
     font-family: "Proxima Semibold";
@@ -876,14 +878,14 @@ select:-webkit-autofill:focus {
   .home__desc {
     font-family: "Proxima Regular";
     font-size: 18px;
-    margin-bottom: 20px;
     line-height: 1.2;
     padding: 30px 30px; }
     @media screen and (max-width: 560px) {
       .home__desc {
         padding: 15px 10px; } }
   .home__action {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 50px; }
 
 .how {
   padding: 100px 0;
