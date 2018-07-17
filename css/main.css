@@ -267,8 +267,9 @@ select:-webkit-autofill:focus {
             box-shadow: none !important; }
   .btn-phone-header {
     font-family: "Proxima Semibold";
-    font-size: 22px;
-    color: #222; }
+    font-size: 22px !important;
+    color: #222;
+    padding: 0 !important; }
     .btn-phone-header .phone_prefix {
       color: #7d3aa1; }
   .btn-outline-light {
