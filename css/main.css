@@ -343,11 +343,13 @@ select:-webkit-autofill:focus {
     .active .nav_bar__link:after {
       content: "";
       display: block;
-      border: 0.5px solid #7d3aa1;
       width: 0;
+      border-bottom: 0.5px solid #7d3aa1;
       -webkit-transition: width 0.3s;
       -o-transition: width 0.3s;
       transition: width 0.3s; }
+    .active .nav_bar__link:after {
+      width: 100%; }
   .nav_bar__link {
     font-family: "Proxima Regular";
     text-decoration: none !important;
