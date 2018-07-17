@@ -392,6 +392,11 @@ select:-webkit-autofill:focus {
 .nav_bar.open + .nav_bar__toggler .icon:before {
   content: "\e910"; }
 
+.icongroup--contact {
+  margin-bottom: 0 !important; }
+  .icongroup--contact .icongroup__desc {
+    color: #222 !important; }
+
 .icongroup {
   margin-bottom: 50px; }
   .icongroup__item {
@@ -1065,7 +1070,7 @@ select:-webkit-autofill:focus {
 .contacts {
   background-color: #f5f5f5;
   border-top: 2px solid #9ed02f;
-  padding: 60px 0; }
+  padding: 60px 0 20px 0; }
   .contacts__title {
     font-family: "Proxima Semibold";
     font-size: 40px;
