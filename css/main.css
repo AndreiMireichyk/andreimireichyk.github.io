@@ -272,17 +272,20 @@ select:-webkit-autofill:focus {
     padding: 0 !important; }
     .btn-phone-header .phone_prefix {
       color: #9ed02f; }
-  .btn-outline-light {
+  .btn-outline-green {
     font-family: "Proxima Regular";
-    font-size: 20px !important;
+    font-size: 22px !important;
     padding: 15px 15px;
-    color: #fff;
+    color: #fff !important;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-    border: 1px solid #fff; }
-    .btn-outline-light:hover {
-      background: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9ed02f), to(#8ab921)) !important;
+    background-image: -webkit-linear-gradient(top, #9ed02f 0%, #8ab921 100%) !important;
+    background-image: -o-linear-gradient(top, #9ed02f 0%, #8ab921 100%) !important;
+    background-image: linear-gradient(to bottom, #9ed02f 0%, #8ab921 100%) !important;
+    border: 1px solid #9ed02f !important; }
+    .btn-outline-green:hover {
       color: #fff; }
   .btn-outline-yellow {
     font-family: "Proxima Regular";
@@ -295,17 +298,6 @@ select:-webkit-autofill:focus {
     border: 1px solid #7d3aa1 !important; }
     .btn-outline-yellow:hover {
       color: #7d3aa1; }
-  .btn-outline-green {
-    font-family: "Proxima Regular";
-    font-size: 20px !important;
-    padding: 15px 15px;
-    color: #9ed02f;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    border: 1px solid #9ed02f !important; }
-    .btn-outline-green:hover {
-      color: #9ed02f; }
 
 .nav_bar {
   display: -webkit-box;
@@ -828,8 +820,7 @@ select:-webkit-autofill:focus {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    background: #7d3aa1;
-    opacity: 0.8;
+    background: rgba(125, 58, 161, 0.8);
     -webkit-box-sizing: padding-box;
             box-sizing: padding-box;
     padding-top: 65px; }
